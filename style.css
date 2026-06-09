@@ -1,0 +1,561 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --border: #d2d2d7;
+  --text: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --accent: #0071e3;
+  --accent-light: #e8f1fb;
+  --correct: #34c759;
+  --wrong: #ff3b30;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: -apple-system, "Hiragino Sans", "Yu Gothic UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 40px;
+}
+
+/* ─── Header ─── */
+header {
+  width: 100%;
+  max-width: 680px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--text);
+}
+
+header p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* ─── Main card ─── */
+#app {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* スクロールはページ全体で行う */
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 28px;
+}
+
+/* ─── Section title ─── */
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+/* ─── Button grid ─── */
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-auto-rows: 56px;
+  gap: 10px;
+}
+
+.btn-grid.two-col {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+}
+
+/* ─── Base button ─── */
+button {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 18px;
+  transition: background 0.15s, transform 0.1s, opacity 0.15s;
+  line-height: 1.3;
+}
+
+button:active { transform: scale(0.97); }
+button:disabled { opacity: 0.4; cursor: default; transform: none; }
+
+/* primary */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover { background: #0077ed; }
+
+/* secondary */
+.btn-secondary {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+.btn-secondary:hover { background: #d4e8fa; }
+
+/* ghost */
+.btn-ghost {
+  background: var(--bg);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover { background: #eaeaec; }
+
+/* year buttons */
+.btn-year {
+  background: var(--surface);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  font-size: 15px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-year:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
+
+/* ─── Review badge ─── */
+.review-badge {
+  display: inline-block;
+  background: #fff3e0;
+  color: #e65100;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 20px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ─── Quiz screen ─── */
+#screen-quiz {
+  display: flex;
+  flex-direction: column;
+}
+
+#screen-quiz .card {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
+
+/* ─── Quiz ─── */
+.quiz-meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-bar-wrap {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+.question-text {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* OX buttons */
+.ox-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.btn-ox {
+  font-size: 28px;
+  padding: 16px 8px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+.btn-ox:hover { border-color: var(--accent); background: var(--accent-light); }
+
+/* スキップボタン共通 */
+.btn-skip {
+  font-size: 14px !important;
+  color: var(--text-secondary) !important;
+  background: #f0f0f2 !important;
+  border-color: #d2d2d7 !important;
+}
+.btn-skip:hover { background: #e5e5ea !important; border-color: #b0b0b8 !important; }
+
+/* 四肢択一スキップ */
+.btn-skip-choice {
+  margin-top: 8px;
+  width: 100%;
+  padding: 11px 18px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: #f0f0f2;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+.btn-skip-choice:hover { background: #e5e5ea; border-color: #b0b0b8; }
+
+/* Choice buttons */
+.choice-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-choice {
+  text-align: left;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.btn-choice:hover { border-color: var(--accent); background: var(--accent-light); }
+
+/* Result colors */
+.btn-correct {
+  border-color: var(--correct) !important;
+  background: #e9fbe9 !important;
+  color: #1a6b2a !important;
+}
+.btn-wrong {
+  border-color: var(--wrong) !important;
+  background: #fde8e8 !important;
+  color: #9b1c1c !important;
+}
+
+/* Result card */
+.result-label {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.result-correct { color: var(--correct); }
+.result-wrong { color: var(--wrong); }
+
+.explanation-box {
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 16px 18px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.explanation-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+#quiz-result {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+#quiz-result.hidden {
+  display: none !important;
+}
+
+.tap-next-hint {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 8px 0 4px;
+  flex-shrink: 0;
+}
+
+/* ─── Quiz nav buttons (前へ / 次へ) ─── */
+.quiz-nav-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.btn-nav {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+.btn-nav:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+/* ─── Summary ─── */
+.summary-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-box .stat-num {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.stat-box .stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.stat-box.s-correct .stat-num { color: var(--correct); }
+.stat-box.s-wrong .stat-num { color: var(--wrong); }
+
+/* ─── Reset danger ─── */
+.btn-danger {
+  background: #fff0f0;
+  color: var(--wrong);
+  border: 1px solid #fca5a5;
+  font-size: 13px;
+  padding: 10px 16px;
+}
+.btn-danger:hover { background: #fee2e2; }
+
+/* ─── Utilities ─── */
+.hidden { display: none !important; }
+
+.back-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.back-row button {
+  font-size: 13px;
+  padding: 8px 14px;
+}
+
+/* ─── スマートフォン対応（600px以下） ─── */
+@media (max-width: 600px) {
+
+  /* ボディ余白を縮小・横スクロール禁止 */
+  body {
+    padding: 12px 10px 60px;
+    overflow-x: hidden;
+  }
+
+  /* 横幅が画面を超えないよう保証 */
+  *, *::before, *::after {
+    max-width: 100%;
+  }
+
+  /* ヘッダー */
+  header {
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-size: 17px;
+  }
+
+  /* カード余白 */
+  .card {
+    padding: 16px 14px;
+    border-radius: 10px;
+  }
+
+  /* ─── 年度・区分選択 ─── */
+  .btn-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 52px;
+    gap: 8px;
+  }
+
+  .btn-grid.two-col {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+
+  /* A/B問題ボタン（inline style の padding を上書き） */
+  #btn-section-a,
+  #btn-section-b {
+    padding: 18px 8px !important;
+    font-size: 16px;
+    min-height: 56px;
+  }
+
+  /* 復習・リセットボタン */
+  #btn-review-mode,
+  #btn-reset-review {
+    min-height: 48px;
+    font-size: 15px;
+  }
+
+  /* ─── クイズ meta 行 ─── */
+  .quiz-meta {
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  /* 中断ボタン */
+  #btn-quiz-back {
+    font-size: 12px;
+    padding: 6px 10px;
+    min-height: 36px;
+  }
+
+  /* ─── 前へ／次へナビ ─── */
+  .quiz-nav-row {
+    gap: 8px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+
+  .btn-nav {
+    min-height: 44px;
+    font-size: 13px;
+    padding: 10px 8px;
+  }
+
+  /* ─── 問題文 ─── */
+  .question-text {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+    word-break: break-all;
+  }
+
+  /* ─── 〇×スキップ（横一列・タップしやすいサイズ） ─── */
+  .ox-buttons {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+  }
+
+  .btn-ox {
+    font-size: 22px;
+    padding: 12px 4px;
+    min-height: 52px;
+    border-radius: 10px;
+  }
+
+  /* ─── 四肢択一 ─── */
+  .btn-choice {
+    font-size: 14px;
+    padding: 13px 14px;
+    min-height: 44px;
+    line-height: 1.55;
+    white-space: normal;
+    word-break: break-all;
+  }
+
+  .btn-skip-choice {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  /* ─── 解説エリア ─── */
+  .explanation-box {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+
+  /* ─── サマリー ─── */
+  .summary-stats {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+
+  .stat-box {
+    padding: 12px 6px;
+  }
+
+  .stat-box .stat-num {
+    font-size: 22px;
+  }
+
+  /* ─── 戻るボタン行 ─── */
+  .back-row button {
+    min-height: 40px;
+  }
+}
+
+/* 極小画面（380px以下）追加調整 */
+@media (max-width: 380px) {
+  .summary-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .btn-ox {
+    font-size: 18px;
+  }
+}

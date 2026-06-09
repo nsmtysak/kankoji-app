@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /mnt/c/Users/nishi/Desktop/kankoji-app/data)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\nishi\\\\Desktop\\\\kankoji-app\\\\data\")",
+      "Bash(powershell -Command \"\\(Select-String -Path 'C:\\\\Users\\\\nishi\\\\Desktop\\\\kankoji-app\\\\data\\\\r7-b.js' -Pattern '\\\\\"r7-b-'\\).Count\")"
+    ]
+  }
+}

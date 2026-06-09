@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1級管工事施工管理技士 試験対策</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!--
+    ── 問題データの読み込み ──────────────────────────────
+    年度・区分のデータファイルをここに追加してください。
+    例: <script src="data/r3-a.js"></script>
+         <script src="data/r3-b.js"></script>
+    ファイルを追加するだけで、アプリ本体の変更は不要です。
+    ──────────────────────────────────────────────────── -->
+  <script src="data/r3-a.js"></script>
+  <script src="data/r3-b.js"></script>
+  <script src="data/r4-a.js"></script>
+  <script src="data/r4-b.js"></script>
+  <script src="data/r5-a.js"></script>
+  <script src="data/r5-b.js"></script>
+  <script src="data/r6-a.js"></script>
+  <script src="data/r6-b.js"></script>
+  <script src="data/r7-a.js"></script>
+  <script src="data/r7-b.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>1級管工事施工管理技士</h1>
+  <p>試験対策アプリ</p>
+</header>
+
+<main id="app">
+
+  <!-- ══════════════ トップ画面 ══════════════ -->
+  <div id="screen-top" class="hidden">
+
+    <div class="card">
+      <div class="section-title">復習モード</div>
+      <button id="btn-review-mode" class="btn-primary" style="width:100%; margin-bottom:10px;">
+        復習問題を解く
+      </button>
+      <button id="btn-reset-review" class="btn-danger" style="width:100%;">
+        復習リストをリセット
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="section-title">年度を選んでください</div>
+      <div id="year-grid" class="btn-grid"></div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ 区分選択 ══════════════ -->
+  <div id="screen-section" class="hidden">
+
+    <div class="card">
+      <div class="back-row">
+        <button id="btn-back-to-top" class="btn-ghost">← 戻る</button>
+        <span id="section-year-label" style="font-weight:600;"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">問題区分を選んでください</div>
+      <div class="btn-grid two-col">
+        <button id="btn-section-a" class="btn-primary" style="padding:24px;">
+          A 問題
+        </button>
+        <button id="btn-section-b" class="btn-primary" style="padding:24px;">
+          B 問題
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ クイズ画面 ══════════════ -->
+  <div id="screen-quiz" class="hidden">
+
+    <div class="card" style="padding-bottom:20px;">
+      <div class="quiz-meta">
+        <button id="btn-quiz-back" class="btn-ghost" style="font-size:12px;padding:6px 12px;">← 中断</button>
+        <span id="quiz-meta-label" style="font-size:13px;color:var(--text-secondary);"></span>
+        <span id="quiz-progress-text" style="font-size:13px;color:var(--text-secondary);"></span>
+      </div>
+
+      <!-- 前後ナビゲーション（年度表示とプログレスバーの間・固定位置）-->
+      <div id="quiz-nav" class="quiz-nav-row">
+        <button id="btn-prev" class="btn-nav">← 前へ</button>
+        <button id="btn-next" class="btn-nav">次へ →</button>
+      </div>
+
+      <div class="progress-bar-wrap">
+        <div id="quiz-progress-bar" class="progress-bar-fill" style="width:0%"></div>
+      </div>
+      <p id="quiz-question" class="question-text"></p>
+
+      <!-- 〇× -->
+      <div id="quiz-ox" class="ox-buttons hidden">
+        <button id="btn-maru" class="btn-ox">〇</button>
+        <button id="btn-batsu" class="btn-ox">×</button>
+        <button id="btn-skip-ox" class="btn-ox btn-skip">スキップ</button>
+      </div>
+
+      <!-- 四肢択一 -->
+      <div id="quiz-choice" class="choice-buttons hidden"></div>
+      <button id="btn-skip-choice" class="btn-skip-choice hidden">スキップ</button>
+
+      <!-- 結果 -->
+      <div id="quiz-result" class="hidden">
+        <div id="result-label" class="result-label"></div>
+        <div class="explanation-label">解説</div>
+        <div class="explanation-box">
+          <p id="explanation-text"></p>
+        </div>
+        <div class="tap-next-hint">タップして次へ →</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ サマリー ══════════════ -->
+  <div id="screen-summary" class="hidden">
+
+    <div class="card">
+      <div class="section-title">セッション結果</div>
+      <div class="summary-stats">
+        <div class="stat-box">
+          <div class="stat-num" id="sum-total">0</div>
+          <div class="stat-label">問題数</div>
+        </div>
+        <div class="stat-box s-correct">
+          <div class="stat-num" id="sum-right">0</div>
+          <div class="stat-label">正解</div>
+        </div>
+        <div class="stat-box s-wrong">
+          <div class="stat-num" id="sum-wrong">0</div>
+          <div class="stat-label">不正解</div>
+        </div>
+      </div>
+      <div style="text-align:center;font-size:32px;font-weight:700;margin-bottom:6px;" id="sum-pct"></div>
+      <div style="text-align:center;font-size:13px;color:var(--text-secondary);margin-bottom:20px;">
+        正解率
+      </div>
+      <div style="text-align:center;font-size:14px;color:var(--text-secondary);margin-bottom:20px;">
+        復習リスト：<strong id="sum-review-count">0</strong> 問
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <button id="btn-sum-review" class="btn-secondary" style="width:100%;">復習問題を解く</button>
+        <button id="btn-sum-top" class="btn-ghost" style="width:100%;">トップに戻る</button>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
