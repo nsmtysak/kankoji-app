@@ -85,6 +85,8 @@ function render() {
   ["screen-top", "screen-section", "screen-quiz", "screen-summary"]
     .forEach(id => $(id).classList.add("hidden"));
 
+  document.body.classList.toggle("quiz-active", state.screen === "quiz");
+
   switch (state.screen) {
     case "top":      renderTop();     break;
     case "section":  renderSection(); break;

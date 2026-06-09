@@ -389,6 +389,9 @@ button:disabled { opacity: 0.4; cursor: default; transform: none; }
 }
 .btn-danger:hover { background: #fee2e2; }
 
+/* クイズ中はヘッダーを非表示（ボタンを画面中央寄りに） */
+body.quiz-active header { display: none; }
+
 /* ─── Utilities ─── */
 .hidden { display: none !important; }
 
