@@ -60,7 +60,14 @@ header p {
   max-width: 680px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 16px;
+}
+
+/* トップ画面内のカード間隔 */
+#screen-top {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 /* スクロールはページ全体で行う */
