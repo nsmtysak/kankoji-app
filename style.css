@@ -67,7 +67,7 @@ header p {
 #screen-top {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 /* スクロールはページ全体で行う */
