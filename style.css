@@ -392,6 +392,20 @@ button:disabled { opacity: 0.4; cursor: default; transform: none; }
 /* クイズ中はヘッダーを非表示（ボタンを画面中央寄りに） */
 body.quiz-active header { display: none; }
 
+/* クイズカードを画面全体に広げる */
+body.quiz-active #screen-quiz .card {
+  min-height: calc(100svh - 48px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 問題文と〇×ボタンの間のスペーサー（ボタンを中央付近に押し下げる） */
+.quiz-spacer {
+  flex: 1;
+  min-height: 16px;
+  max-height: 140px;
+}
+
 /* ─── Utilities ─── */
 .hidden { display: none !important; }
 
