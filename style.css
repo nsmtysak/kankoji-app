@@ -60,7 +60,7 @@ header p {
   max-width: 680px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 /* スクロールはページ全体で行う */

@@ -4,6 +4,7 @@
 
 const STORAGE_KEY          = "kankoji_review";
 const STORAGE_PROGRESS_KEY = "kankoji_progress";
+const STORAGE_LAST_KEY     = "kankoji_last";
 
 // ─── 復習リスト localStorage ──────────────
 function loadReview() {
@@ -47,6 +48,23 @@ function clearProgress(key) {
   const all = loadAllProgress();
   delete all[key];
   localStorage.setItem(STORAGE_PROGRESS_KEY, JSON.stringify(all));
+}
+
+// ─── 最後に開いたクイズキー ────────────────────
+function saveLastKey(key) {
+  localStorage.setItem(STORAGE_LAST_KEY, key);
+}
+function loadLastKey() {
+  return localStorage.getItem(STORAGE_LAST_KEY) || null;
+}
+
+// キー（例: "r5-b"）→ 表示ラベル（例: "令和5年度 B問題"）
+function keyToLabel(key) {
+  const parts = key.split("-");
+  const prefix = parts[0];
+  const section = (parts[1] || "").toUpperCase();
+  const year = YEAR_DEFS.find(d => d.prefix === prefix)?.label || prefix;
+  return `${year}  ${section}問題`;
 }
 
 // ─── 利用可能データセットを走査 ──────────────
@@ -112,6 +130,17 @@ function renderTop() {
     reviewBtn.disabled = true;
   }
 
+  // 「前回の続き」カード
+  const lastKey = loadLastKey();
+  const lastProgress = lastKey ? loadProgress(lastKey) : 0;
+  const cardLast = $("card-last");
+  if (lastKey && lastProgress > 0) {
+    $("last-label").textContent = keyToLabel(lastKey) + `  ${lastProgress + 1}問目から`;
+    cardLast.classList.remove("hidden");
+  } else {
+    cardLast.classList.add("hidden");
+  }
+
   const grid = $("year-grid");
   grid.innerHTML = "";
   YEAR_DEFS.forEach(({ label, prefix }) => {
@@ -170,6 +199,9 @@ function startQuiz(key) {
     alert("問題データが見つかりません。");
     return;
   }
+
+  // 復習モード以外は「最後に開いたキー」として保存
+  if (key !== "__review__") saveLastKey(key);
 
   // ─── 中断・再開チェック ───
   const savedIndex = loadProgress(key);
@@ -408,6 +440,12 @@ function renderSummary() {
 
 // ─── イベント設定 ─────────────────────────────
 function setupEvents() {
+  // 前回の続き
+  $("btn-last-resume").addEventListener("click", () => {
+    const key = loadLastKey();
+    if (key) startQuiz(key);
+  });
+
   // 復習モードへ
   $("btn-review-mode").addEventListener("click", () => {
     startQuiz("__review__");
