@@ -323,8 +323,6 @@ function onOxAnswer(userAnswer) {
   const correct = (q.answer === userAnswer);
   handleResult(correct, q, userAnswer);
 
-  $("btn-maru").disabled = true;
-  $("btn-batsu").disabled = true;
   $("btn-skip-ox").disabled = true;
   if (userAnswer === true) {
     $("btn-maru").classList.add(correct ? "btn-correct" : "btn-wrong");
@@ -495,9 +493,9 @@ function setupEvents() {
     }
   });
 
-  // 〇/× ボタン（伝播を止める）
-  $("btn-maru").addEventListener("click",  e => { e.stopPropagation(); onOxAnswer(true);  });
-  $("btn-batsu").addEventListener("click", e => { e.stopPropagation(); onOxAnswer(false); });
+  // 〇/× ボタン（解答後は次の問題へ進む）
+  $("btn-maru").addEventListener("click",  e => { e.stopPropagation(); state.answered ? goNext() : onOxAnswer(true);  });
+  $("btn-batsu").addEventListener("click", e => { e.stopPropagation(); state.answered ? goNext() : onOxAnswer(false); });
   $("btn-skip-ox").addEventListener("click",     e => { e.stopPropagation(); onSkipAnswer(); });
   $("btn-skip-choice").addEventListener("click", e => { e.stopPropagation(); onSkipAnswer(); });
 
