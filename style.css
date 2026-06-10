@@ -587,7 +587,7 @@ body.quiz-active #screen-quiz .card {
 
   /* ─── 問題文 ─── */
   .question-text {
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.7;
     margin-bottom: 16px;
     word-break: break-all;
@@ -623,7 +623,7 @@ body.quiz-active #screen-quiz .card {
 
   /* ─── 解説エリア ─── */
   .explanation-box {
-    font-size: 15px;
+    font-size: 17px;
     padding: 12px 14px;
   }
 
