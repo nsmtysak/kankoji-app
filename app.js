@@ -251,14 +251,18 @@ function renderQuiz() {
 
   $("quiz-question").textContent = q.question;
 
-  // IDから問番号・枝番号を抽出して表示（例: "r5-a-14-3" → "No.14 (3)"）
+  // 年度・区分・問番号・枝番号を組み合わせて表示
+  // 例: "令和5年度B問題 ／ No.42（2）"
   const idParts = (q.id || "").split("-");
   const qNum  = idParts[2];
   const qSub  = idParts[3];
-  const qLabel = qNum
+  const yearLabel    = q.year ? `${q.year}度` : "";
+  const sectionLabel = q.section ? `${q.section}問題` : "";
+  const noLabel      = qNum
     ? (qSub ? `No.${qNum}（${qSub}）` : `No.${qNum}`)
     : "";
-  $("quiz-qnum").textContent = qLabel;
+  const fullLabel = [yearLabel + sectionLabel, noLabel].filter(Boolean).join(" ／ ");
+  $("quiz-qnum").textContent = fullLabel;
 
   const oxArea     = $("quiz-ox");
   const choiceArea = $("quiz-choice");
