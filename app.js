@@ -341,7 +341,6 @@ function onSkipAnswer() {
   handleResult(false, q, null);
 
   if (q.type === "ox") {
-    $("btn-skip-ox").disabled = true;
     // 正解ボタンを緑で示す
     if (q.answer === true) $("btn-maru").classList.add("btn-correct");
     else $("btn-batsu").classList.add("btn-correct");
@@ -350,7 +349,6 @@ function onSkipAnswer() {
     btns.forEach((btn, i) => {
       if (i === q.answer) btn.classList.add("btn-correct");
     });
-    $("btn-skip-choice").disabled = true;
   }
 }
 
@@ -492,8 +490,8 @@ function setupEvents() {
   // 〇/× ボタン（解答後は次の問題へ進む）
   $("btn-maru").addEventListener("click",  e => { e.stopPropagation(); state.answered ? goNext() : onOxAnswer(true);  });
   $("btn-batsu").addEventListener("click", e => { e.stopPropagation(); state.answered ? goNext() : onOxAnswer(false); });
-  $("btn-skip-ox").addEventListener("click",     e => { e.stopPropagation(); onSkipAnswer(); });
-  $("btn-skip-choice").addEventListener("click", e => { e.stopPropagation(); onSkipAnswer(); });
+  $("btn-skip-ox").addEventListener("click",     e => { e.stopPropagation(); state.answered ? goNext() : onSkipAnswer(); });
+  $("btn-skip-choice").addEventListener("click", e => { e.stopPropagation(); state.answered ? goNext() : onSkipAnswer(); });
 
   // ── カード全体タップで次へ（解答後のみ有効）──
   $("screen-quiz").addEventListener("click", () => {
