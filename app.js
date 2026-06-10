@@ -499,6 +499,23 @@ function setupEvents() {
     }
   });
 
+  // 問題番号タップで指定問題へジャンプ
+  $("quiz-progress-text").addEventListener("click", e => {
+    e.stopPropagation();
+    const total = state.questions.length;
+    const input = prompt(`問題番号を入力（1〜${total}）:`);
+    if (input === null) return;
+    const num = parseInt(input, 10);
+    if (isNaN(num) || num < 1 || num > total) {
+      alert(`1〜${total} の番号を入力してください。`);
+      return;
+    }
+    state.index = num - 1;
+    state.answered = false;
+    saveProgress(state.currentKey, state.index);
+    render();
+  });
+
   // 前後ナビボタン（伝播を止めてカード全体タップの二重発動を防ぐ）
   $("btn-prev").addEventListener("click", e => {
     e.stopPropagation();

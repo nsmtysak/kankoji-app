@@ -63,8 +63,9 @@ header p {
   gap: 16px;
 }
 
-/* トップ画面内のカード間隔 */
-#screen-top {
+/* トップ・区分選択画面内のカード間隔 */
+#screen-top,
+#screen-section {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -113,6 +114,7 @@ button {
   padding: 14px 18px;
   transition: background 0.15s, transform 0.1s, opacity 0.15s;
   line-height: 1.3;
+  touch-action: manipulation; /* ダブルタップによるズームを防止 */
 }
 
 button:active { transform: scale(0.97); }
@@ -177,6 +179,13 @@ button:disabled { opacity: 0.4; cursor: default; transform: none; }
   display: flex;
   flex-direction: column;
   padding-bottom: 16px;
+}
+
+/* 問題番号タップでジャンプ */
+#quiz-progress-text {
+  cursor: pointer;
+  text-decoration: underline dotted;
+  touch-action: manipulation;
 }
 
 /* ─── Quiz ─── */
