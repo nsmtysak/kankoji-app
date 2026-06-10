@@ -341,8 +341,6 @@ function onSkipAnswer() {
   handleResult(false, q, null);
 
   if (q.type === "ox") {
-    $("btn-maru").disabled = true;
-    $("btn-batsu").disabled = true;
     $("btn-skip-ox").disabled = true;
     // 正解ボタンを緑で示す
     if (q.answer === true) $("btn-maru").classList.add("btn-correct");
@@ -350,7 +348,6 @@ function onSkipAnswer() {
   } else {
     const btns = $("quiz-choice").querySelectorAll("button");
     btns.forEach((btn, i) => {
-      btn.disabled = true;
       if (i === q.answer) btn.classList.add("btn-correct");
     });
     $("btn-skip-choice").disabled = true;
