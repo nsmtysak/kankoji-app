@@ -1084,7 +1084,7 @@ window.QUESTIONS["r5-a"] = [
     id: "r5-a-44-2", year: "令和5年", section: "A", type: "ox",
     question: "設計図書に記載する配管材料の組合せとして、排水用硬質塩化ビニルライニング鋼管の規格記号はSGP-VD（JWWA）である。",
     answer: false, choices: [],
-    explanation: "×：排水用硬質塩化ビニルライニング鋼管の規格はWSP 042（日本水道鋼管協会）であり、JWWA規格ではない。規格団体の記載が誤り。"
+    explanation: "×：排水用硬質塩化ビニルライニング鋼管の規格はWSP 042（日本水道鋼管協会）であり、JWWA規格ではない。正しい呼称はV-DA。規格団体・記号の記載が誤り。"
   },
   {
     id: "r5-a-44-3", year: "令和5年", section: "A", type: "ox",
