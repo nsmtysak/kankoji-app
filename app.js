@@ -499,21 +499,37 @@ function setupEvents() {
     }
   });
 
-  // 問題番号タップで指定問題へジャンプ
+  // 問題番号タップで指定問題へジャンプ（プルダウン選択）
   $("quiz-progress-text").addEventListener("click", e => {
     e.stopPropagation();
     const total = state.questions.length;
-    const input = prompt(`問題番号を入力（1〜${total}）:`);
-    if (input === null) return;
-    const num = parseInt(input, 10);
-    if (isNaN(num) || num < 1 || num > total) {
-      alert(`1〜${total} の番号を入力してください。`);
-      return;
+    const sel = $("jump-select");
+    sel.innerHTML = "";
+    for (let i = 1; i <= total; i++) {
+      const opt = document.createElement("option");
+      opt.value = i;
+      opt.textContent = `${i} 問目`;
+      if (i === state.index + 1) opt.selected = true;
+      sel.appendChild(opt);
     }
+    $("jump-modal").classList.remove("hidden");
+  });
+
+  $("btn-jump-ok").addEventListener("click", () => {
+    const num = parseInt($("jump-select").value, 10);
+    $("jump-modal").classList.add("hidden");
     state.index = num - 1;
     state.answered = false;
     saveProgress(state.currentKey, state.index);
     render();
+  });
+
+  $("btn-jump-cancel").addEventListener("click", () => {
+    $("jump-modal").classList.add("hidden");
+  });
+
+  $("jump-overlay").addEventListener("click", () => {
+    $("jump-modal").classList.add("hidden");
   });
 
   // 前後ナビボタン（伝播を止めてカード全体タップの二重発動を防ぐ）

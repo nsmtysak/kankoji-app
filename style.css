@@ -422,6 +422,64 @@ body.quiz-active #screen-quiz .card {
   max-height: 140px;
 }
 
+/* ─── 問題番号ジャンプ モーダル ─── */
+#jump-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#jump-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+#jump-dialog {
+  position: relative;
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 24px 20px 20px;
+  width: min(320px, 90vw);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+#jump-title {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+}
+
+#jump-select {
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  appearance: auto;
+}
+
+#jump-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#jump-actions button {
+  padding: 12px;
+  font-size: 15px;
+}
+
 /* ─── Utilities ─── */
 .hidden { display: none !important; }
 
