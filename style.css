@@ -213,6 +213,13 @@ button:disabled { opacity: 0.4; cursor: default; transform: none; }
   transition: width 0.3s;
 }
 
+.qnum-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
 .question-text {
   font-size: 17px;
   font-weight: 500;
