@@ -164,6 +164,27 @@ function renderTop() {
     });
     grid.appendChild(btn);
   });
+
+  // 各年度の復習ボタン
+  const reviewData = loadReview();
+  const yrReviewGrid = $("year-review-grid");
+  yrReviewGrid.innerHTML = "";
+  YEAR_DEFS.forEach(({ label, prefix }) => {
+    // この年度の復習問題を抽出（q.year === "令和X年"）
+    const yearStr = label.replace(/度$/, ""); // "令和7年度" → "令和7年"
+    const count = Object.values(reviewData).filter(q => q.year === yearStr).length;
+
+    const btn = document.createElement("button");
+    btn.className = "btn-year-review";
+    btn.innerHTML = `<span class="yr-name">${label}</span><span class="yr-sub">復習</span>`;
+
+    if (count === 0) {
+      btn.disabled = true;
+    } else {
+      btn.addEventListener("click", () => startYearReview(prefix));
+    }
+    yrReviewGrid.appendChild(btn);
+  });
   // ※ サンプルボタンは表示しない
 }
 
@@ -182,6 +203,26 @@ function renderSection() {
   const btnB = $("btn-section-b");
   btnA.disabled = !available.includes(state.currentYear + "-a");
   btnB.disabled = !available.includes(state.currentYear + "-b");
+}
+
+// ─── 各年度の復習起動 ────────────────────────────
+function startYearReview(prefix) {
+  const yearDef = YEAR_DEFS.find(d => d.prefix === prefix);
+  const yearStr = yearDef ? yearDef.label.replace(/度$/, "") : prefix;
+  const questions = Object.values(loadReview()).filter(q => q.year === yearStr);
+  if (questions.length === 0) {
+    alert("この年度の復習問題はありません。");
+    return;
+  }
+  state.questions    = questions;
+  state.index        = 0;
+  state.currentKey   = "__review_year_" + prefix + "__";
+  state.sessionRight = 0;
+  state.sessionWrong = 0;
+  state.answered     = false;
+  state.isReviewMode = true;
+  state.screen       = "quiz";
+  render();
 }
 
 // ─── クイズ開始 ───────────────────────────────

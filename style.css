@@ -157,6 +157,42 @@ button:disabled { opacity: 0.4; cursor: default; transform: none; }
 }
 .btn-year:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
 
+/* ─── 各年度の復習 仕切り ─── */
+.year-review-divider {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 20px 0 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* 各年度復習ボタン */
+.btn-year-review {
+  background: #e8e8ed;
+  color: var(--text);
+  border: 1.5px solid #c8c8d0;
+  font-size: 13px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  line-height: 1.3;
+}
+.btn-year-review:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+.btn-year-review .yr-name { font-size: 13px; font-weight: 600; }
+.btn-year-review .yr-sub  { font-size: 11px; color: var(--text-secondary); }
+.btn-year-review:hover:not(:disabled) .yr-sub { color: var(--accent); }
+
 /* ─── Review badge ─── */
 .review-badge {
   display: inline-block;
