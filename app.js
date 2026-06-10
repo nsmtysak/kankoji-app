@@ -176,7 +176,7 @@ function renderTop() {
 
     const btn = document.createElement("button");
     btn.className = "btn-year-review";
-    btn.innerHTML = `<span class="yr-name">${label}</span><span class="yr-sub">復習</span>`;
+    btn.innerHTML = `<span class="yr-name">${label}</span><span class="yr-sub">復習（${count}問）</span>`;
 
     if (count === 0) {
       btn.disabled = true;
