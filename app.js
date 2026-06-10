@@ -307,8 +307,8 @@ function renderChoices(q) {
     btn.className = "btn-choice";
     btn.textContent = `${i + 1}. ${text}`;
     btn.addEventListener("click", e => {
-      e.stopPropagation(); // カード全体タップへの伝播を止める
-      onChoiceAnswer(i);
+      e.stopPropagation();
+      state.answered ? goNext() : onChoiceAnswer(i);
     });
     area.appendChild(btn);
   });
@@ -368,7 +368,6 @@ function onChoiceAnswer(userIndex) {
   $("btn-skip-choice").disabled = true;
   const btns = $("quiz-choice").querySelectorAll("button");
   btns.forEach((btn, i) => {
-    btn.disabled = true;
     if (i === q.answer) btn.classList.add("btn-correct");
     else if (i === userIndex && !correct) btn.classList.add("btn-wrong");
   });
