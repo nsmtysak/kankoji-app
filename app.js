@@ -170,9 +170,8 @@ function renderTop() {
   const yrReviewGrid = $("year-review-grid");
   yrReviewGrid.innerHTML = "";
   YEAR_DEFS.forEach(({ label, prefix }) => {
-    // この年度の復習問題を抽出（q.year === "令和X年"）
-    const yearStr = label.replace(/度$/, ""); // "令和7年度" → "令和7年"
-    const count = Object.values(reviewData).filter(q => q.year === yearStr).length;
+    // この年度の復習問題を抽出（q.year === "令和X年度"）
+    const count = Object.values(reviewData).filter(q => q.year === label).length;
 
     const btn = document.createElement("button");
     btn.className = "btn-year-review";
@@ -208,7 +207,7 @@ function renderSection() {
 // ─── 各年度の復習起動 ────────────────────────────
 function startYearReview(prefix) {
   const yearDef = YEAR_DEFS.find(d => d.prefix === prefix);
-  const yearStr = yearDef ? yearDef.label.replace(/度$/, "") : prefix;
+  const yearStr = yearDef ? yearDef.label : prefix;
   const questions = Object.values(loadReview()).filter(q => q.year === yearStr);
   if (questions.length === 0) {
     alert("この年度の復習問題はありません。");
