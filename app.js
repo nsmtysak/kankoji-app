@@ -30,6 +30,19 @@ function resetReview() {
 function reviewCount() {
   return Object.keys(loadReview()).length;
 }
+function isInReview(id) {
+  return Object.prototype.hasOwnProperty.call(loadReview(), id);
+}
+
+// ─── 配列シャッフル（Fisher-Yates）──────────
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 // ─── 進捗 localStorage ────────────────────
 function loadAllProgress() {
@@ -215,7 +228,7 @@ function startYearReview(prefix) {
     alert("この年度の復習問題はありません。");
     return;
   }
-  state.questions    = questions;
+  state.questions    = shuffle(questions);
   state.index        = 0;
   state.currentKey   = "__review_year_" + prefix + "__";
   state.sessionRight = 0;
@@ -241,6 +254,9 @@ function startQuiz(key) {
     alert("問題データが見つかりません。");
     return;
   }
+
+  // 出題順をランダム化
+  questions = shuffle(questions);
 
   // 復習モード以外は「最後に開いたキー」として保存
   if (key !== "__review__") saveLastKey(key);
@@ -329,6 +345,9 @@ function renderQuiz() {
 
   state.answered = false;
 
+  // 「復習に追加」ボタンの表示を登録状態に合わせる
+  updateReviewBtnLabels();
+
   // 前後ナビボタンの状態更新
   $("btn-prev").disabled = (state.index === 0);
   $("btn-next").disabled = false;
@@ -369,7 +388,6 @@ function onOxAnswer(userAnswer) {
   const correct = (q.answer === userAnswer);
   handleResult(correct, q, userAnswer);
 
-  $("btn-skip-ox").disabled = true;
   if (userAnswer === true) {
     $("btn-maru").classList.add(correct ? "btn-correct" : "btn-wrong");
     if (!correct) $("btn-batsu").classList.add("btn-correct");
@@ -379,23 +397,24 @@ function onOxAnswer(userAnswer) {
   }
 }
 
-function onSkipAnswer() {
-  if (state.answered) return;
-  state.answered = true;
-
+// ─── 復習リストへの追加／解除（解答前・解答後どちらでも可）──
+function toggleReview() {
   const q = state.questions[state.index];
-  handleResult(false, q, null);
+  if (isInReview(q.id)) removeFromReview(q.id);
+  else addToReview(q);
+  updateReviewBtnLabels();
+}
 
-  if (q.type === "ox") {
-    // 正解ボタンを緑で示す
-    if (q.answer === true) $("btn-maru").classList.add("btn-correct");
-    else $("btn-batsu").classList.add("btn-correct");
-  } else {
-    const btns = $("quiz-choice").querySelectorAll("button");
-    btns.forEach((btn, i) => {
-      if (i === q.answer) btn.classList.add("btn-correct");
-    });
-  }
+// 「復習に追加」ボタンの表示を現在の登録状態に合わせて更新
+function updateReviewBtnLabels() {
+  const q = state.questions[state.index];
+  const inList = q ? isInReview(q.id) : false;
+  const label  = inList ? "✓ 復習中（解除）" : "復習に追加";
+  ["btn-skip-ox", "btn-skip-choice"].forEach(id => {
+    const b = $(id);
+    b.textContent = label;
+    b.classList.toggle("in-review", inList);
+  });
 }
 
 function onChoiceAnswer(userIndex) {
@@ -406,7 +425,6 @@ function onChoiceAnswer(userIndex) {
   const correct = (q.answer === userIndex);
   handleResult(correct, q, userIndex);
 
-  $("btn-skip-choice").disabled = true;
   const btns = $("quiz-choice").querySelectorAll("button");
   btns.forEach((btn, i) => {
     if (i === q.answer) btn.classList.add("btn-correct");
@@ -415,12 +433,11 @@ function onChoiceAnswer(userIndex) {
 }
 
 function handleResult(correct, q, _userAnswer) {
+  // 復習リストは解答結果で自動増減しない（「復習に追加」ボタンで手動管理）
   if (correct) {
     state.sessionRight++;
-    removeFromReview(q.id);
   } else {
     state.sessionWrong++;
-    addToReview(q);
   }
 
   const resultArea = $("quiz-result");
@@ -536,8 +553,8 @@ function setupEvents() {
   // 〇/× ボタン（解答後は次の問題へ進む）
   $("btn-maru").addEventListener("click",  e => { e.stopPropagation(); state.answered ? goNext() : onOxAnswer(true);  });
   $("btn-batsu").addEventListener("click", e => { e.stopPropagation(); state.answered ? goNext() : onOxAnswer(false); });
-  $("btn-skip-ox").addEventListener("click",     e => { e.stopPropagation(); state.answered ? goNext() : onSkipAnswer(); });
-  $("btn-skip-choice").addEventListener("click", e => { e.stopPropagation(); state.answered ? goNext() : onSkipAnswer(); });
+  $("btn-skip-ox").addEventListener("click",     e => { e.stopPropagation(); toggleReview(); });
+  $("btn-skip-choice").addEventListener("click", e => { e.stopPropagation(); toggleReview(); });
 
   // ── カード全体タップで次へ（解答後のみ有効）──
   $("screen-quiz").addEventListener("click", () => {

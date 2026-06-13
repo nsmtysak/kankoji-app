@@ -305,6 +305,20 @@ button:disabled { opacity: 0.4; cursor: default; transform: none; }
 }
 .btn-skip-choice:hover { background: #e5e5ea; border-color: #b0b0b8; }
 
+/* 復習リスト登録済みの状態 */
+.btn-skip.in-review {
+  color: #b25000 !important;
+  background: #fff3e6 !important;
+  border-color: #ffb066 !important;
+  font-weight: 600 !important;
+}
+.btn-skip-choice.in-review {
+  color: #b25000;
+  background: #fff3e6;
+  border-color: #ffb066;
+  font-weight: 600;
+}
+
 /* Choice buttons */
 .choice-buttons {
   display: flex;
