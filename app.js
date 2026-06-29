@@ -4,6 +4,7 @@
 
 const STORAGE_KEY          = "kankoji_review";
 const STORAGE_PROGRESS_KEY = "kankoji_progress";
+const STORAGE_ORDER_KEY    = "kankoji_order";
 const STORAGE_LAST_KEY     = "kankoji_last";
 
 // ─── 復習リスト localStorage ──────────────
@@ -33,6 +34,21 @@ function reviewCount() {
 function isInReview(id) {
   return Object.prototype.hasOwnProperty.call(loadReview(), id);
 }
+// 復習リストには問題オブジェクトのスナップショットが保存されているため、
+// 出題時は常に最新のデータ（window.QUESTIONS）から id で引き直す。
+// これにより、登録後にデータ側の正答・問題文を修正しても反映される。
+function findQuestionById(id) {
+  const all = window.QUESTIONS || {};
+  for (const key of Object.keys(all)) {
+    const found = (all[key] || []).find(q => q.id === id);
+    if (found) return found;
+  }
+  return null;
+}
+function loadReviewFresh() {
+  // 最新データで引き直し、見つからないものは保存済みスナップショットを使う
+  return Object.values(loadReview()).map(q => findQuestionById(q.id) || q);
+}
 
 // ─── 配列シャッフル（Fisher-Yates）──────────
 function shuffle(arr) {
@@ -61,6 +77,43 @@ function clearProgress(key) {
   const all = loadAllProgress();
   delete all[key];
   localStorage.setItem(STORAGE_PROGRESS_KEY, JSON.stringify(all));
+}
+
+// ─── 出題順 localStorage ──────────────────
+// シャッフルした出題順（問題ID配列）をキーごとに保存し、
+// 中断→再開時に同じ並びを復元する。これにより index ベースの進捗が
+// 「index未満＝回答済み／index以降＝未回答」と正しく対応する。
+function loadAllOrders() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_ORDER_KEY)) || {}; }
+  catch { return {}; }
+}
+function loadOrder(key) {
+  return loadAllOrders()[key] || null;
+}
+function saveOrder(key, ids) {
+  const all = loadAllOrders();
+  all[key] = ids;
+  localStorage.setItem(STORAGE_ORDER_KEY, JSON.stringify(all));
+}
+function clearOrder(key) {
+  const all = loadAllOrders();
+  delete all[key];
+  localStorage.setItem(STORAGE_ORDER_KEY, JSON.stringify(all));
+}
+
+// 保存された出題順（ID配列）に従って問題プールを並べ替える。
+// 順序に無い新規問題は末尾に追加し、プールに無いIDは除外する。
+function orderQuestions(pool, order) {
+  const byId = new Map(pool.map(q => [q.id, q]));
+  const result = [];
+  order.forEach(id => {
+    if (byId.has(id)) {
+      result.push(byId.get(id));
+      byId.delete(id);
+    }
+  });
+  byId.forEach(q => result.push(q));
+  return result;
 }
 
 // ─── 最後に開いたクイズキー ────────────────────
@@ -179,13 +232,13 @@ function renderTop() {
   });
 
   // 各年度の復習ボタン
-  const reviewData = loadReview();
+  const reviewData = loadReviewFresh();
   const yrReviewGrid = $("year-review-grid");
   yrReviewGrid.innerHTML = "";
   YEAR_DEFS.forEach(({ label, prefix }) => {
     // この年度の復習問題を抽出（"令和X年" / "令和X年度" の表記揺れを吸収）
     const norm = s => (s || "").replace(/度$/, "");
-    const count = Object.values(reviewData).filter(q => norm(q.year) === norm(label)).length;
+    const count = reviewData.filter(q => norm(q.year) === norm(label)).length;
 
     const btn = document.createElement("button");
     btn.className = "btn-year-review";
@@ -223,7 +276,7 @@ function startYearReview(prefix) {
   const yearDef = YEAR_DEFS.find(d => d.prefix === prefix);
   const yearStr = yearDef ? yearDef.label : prefix;
   const norm = s => (s || "").replace(/度$/, "");
-  const questions = Object.values(loadReview()).filter(q => norm(q.year) === norm(yearStr));
+  const questions = loadReviewFresh().filter(q => norm(q.year) === norm(yearStr));
   if (questions.length === 0) {
     alert("この年度の復習問題はありません。");
     return;
@@ -241,31 +294,33 @@ function startYearReview(prefix) {
 
 // ─── クイズ開始 ───────────────────────────────
 function startQuiz(key) {
-  let questions;
+  let pool;
   if (key === "__review__") {
-    questions = Object.values(loadReview());
+    pool = loadReviewFresh();
     state.isReviewMode = true;
   } else {
-    questions = (window.QUESTIONS || {})[key] || [];
+    pool = (window.QUESTIONS || {})[key] || [];
     state.isReviewMode = false;
   }
 
-  if (questions.length === 0) {
+  if (pool.length === 0) {
     alert("問題データが見つかりません。");
     return;
   }
-
-  // 出題順をランダム化
-  questions = shuffle(questions);
 
   // 復習モード以外は「最後に開いたキー」として保存
   if (key !== "__review__") saveLastKey(key);
 
   // ─── 中断・再開チェック ───
   const savedIndex = loadProgress(key);
+  const savedOrder = loadOrder(key);
+  let questions;
   let startIndex = 0;
 
-  if (savedIndex > 0 && savedIndex < questions.length) {
+  // 保存済みの出題順があり、かつ途中まで進んでいれば再開可能
+  const canResume = savedOrder && savedIndex > 0 && savedIndex < savedOrder.length;
+
+  if (canResume) {
     const resume = confirm(
       `前回は ${savedIndex + 1} 問目まで進んでいます。\n` +
       `続きから再開しますか？\n\n` +
@@ -273,12 +328,20 @@ function startQuiz(key) {
       `キャンセル → 最初から始める`
     );
     if (resume) {
-      startIndex = savedIndex;
+      // 前回と同じ出題順を復元し、同じ位置から続ける
+      // （index未満＝回答済みを再出題せず、index以降の未回答を出題）
+      questions  = orderQuestions(pool, savedOrder);
+      startIndex = Math.min(savedIndex, questions.length - 1);
     } else {
+      // 最初から：新しい出題順を作成して保存
+      questions = shuffle(pool);
+      saveOrder(key, questions.map(q => q.id));
       clearProgress(key);
     }
-  } else if (savedIndex >= questions.length) {
-    // 前回完了済み → 進捗をクリアして最初から
+  } else {
+    // 新規開始（または前回完了済み）：新しい出題順を作成して保存
+    questions = shuffle(pool);
+    saveOrder(key, questions.map(q => q.id));
     clearProgress(key);
   }
 
@@ -314,7 +377,7 @@ function renderQuiz() {
   const idParts = (q.id || "").split("-");
   const qNum  = idParts[2];
   const qSub  = idParts[3];
-  const yearLabel    = q.year ? `${q.year}度` : "";
+  const yearLabel    = q.year || "";
   const sectionLabel = q.section ? `${q.section}問題` : "";
   const noLabel      = qNum
     ? (qSub ? `No.${qNum}（${qSub}）` : `No.${qNum}`)
@@ -455,6 +518,7 @@ function goNext() {
   state.index++;
   if (state.index >= state.questions.length) {
     clearProgress(state.currentKey);
+    clearOrder(state.currentKey);
     state.screen = "summary";
   } else {
     saveProgress(state.currentKey, state.index);
@@ -468,6 +532,7 @@ function goNextNav() {
   state.index++;
   if (state.index >= state.questions.length) {
     clearProgress(state.currentKey);
+    clearOrder(state.currentKey);
     state.screen = "summary";
   } else {
     saveProgress(state.currentKey, state.index);
@@ -502,6 +567,98 @@ function renderSummary() {
   $("sum-review-count").textContent = reviewCount();
 }
 
+// ─── データ引継ぎ（復習リストのコード書き出し／読み込み）──
+// 別端末との同期用。復習リストの「ID一覧」だけをコード化してやり取りする。
+// 取り込み時は ID から最新データ（window.QUESTIONS）を引き直して登録する。
+const TRANSFER_PREFIX = "KANKOJI1:";
+
+function buildTransferCode() {
+  const ids = Object.keys(loadReview());
+  return TRANSFER_PREFIX + btoa(ids.join(","));
+}
+
+function parseTransferCode(raw) {
+  const code = (raw || "").trim();
+  if (!code.startsWith(TRANSFER_PREFIX)) return null;
+  try {
+    const decoded = atob(code.slice(TRANSFER_PREFIX.length));
+    return decoded.split(",").map(s => s.trim()).filter(Boolean);
+  } catch {
+    return null;
+  }
+}
+
+function openTransferModal(mode) {
+  const modal  = $("transfer-modal");
+  const codeEl = $("transfer-code");
+  modal.dataset.mode = mode;
+
+  if (mode === "export") {
+    const count = reviewCount();
+    if (count === 0) {
+      alert("復習リストが空です。書き出すデータがありません。");
+      return;
+    }
+    $("transfer-title").textContent = "データを書き出す";
+    $("transfer-desc").textContent  =
+      `復習リスト ${count}問 のコードです。コピーして、もう片方の端末の「読み込む」に貼り付けてください。`;
+    codeEl.value    = buildTransferCode();
+    codeEl.readOnly = true;
+    $("btn-transfer-ok").textContent = "コピー";
+  } else {
+    $("transfer-title").textContent = "データを読み込む";
+    $("transfer-desc").textContent  =
+      "書き出したコードを貼り付けて「取り込む」を押してください。現在の復習リストに追加されます。";
+    codeEl.value    = "";
+    codeEl.readOnly = false;
+    $("btn-transfer-ok").textContent = "取り込む";
+  }
+
+  modal.classList.remove("hidden");
+  if (mode === "import") setTimeout(() => codeEl.focus(), 0);
+}
+
+function closeTransferModal() {
+  $("transfer-modal").classList.add("hidden");
+}
+
+function copyTransferCode() {
+  const el = $("transfer-code");
+  el.focus();
+  el.select();
+  el.setSelectionRange(0, el.value.length);
+  let ok = false;
+  try { ok = document.execCommand("copy"); } catch { ok = false; }
+  if (ok) { alert("コードをコピーしました。"); return; }
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(el.value).then(
+      () => alert("コードをコピーしました。"),
+      () => alert("自動コピーできませんでした。コードを選択して手動でコピーしてください。")
+    );
+    return;
+  }
+  alert("自動コピーできませんでした。コードを選択して手動でコピーしてください。");
+}
+
+function importTransferCode() {
+  const ids = parseTransferCode($("transfer-code").value);
+  if (!ids) {
+    alert("コードの形式が正しくありません。書き出したコードをそのまま貼り付けてください。");
+    return;
+  }
+  let added = 0, skipped = 0;
+  ids.forEach(id => {
+    const q = findQuestionById(id);
+    if (!q) { skipped++; return; }
+    if (!isInReview(id)) { addToReview(q); added++; }
+  });
+  closeTransferModal();
+  render();
+  let msg = `取り込み完了：${added}問を追加しました（現在 ${reviewCount()}問）。`;
+  if (skipped > 0) msg += `\n※${skipped}問はこの端末の問題データに見つからず取り込めませんでした。`;
+  alert(msg);
+}
+
 // ─── イベント設定 ─────────────────────────────
 function setupEvents() {
   // 前回の続き
@@ -521,6 +678,16 @@ function setupEvents() {
       resetReview();
       render();
     }
+  });
+
+  // データ引継ぎ：書き出す／読み込む
+  $("btn-export-review").addEventListener("click", () => openTransferModal("export"));
+  $("btn-import-review").addEventListener("click", () => openTransferModal("import"));
+  $("btn-transfer-cancel").addEventListener("click", closeTransferModal);
+  $("transfer-overlay").addEventListener("click", closeTransferModal);
+  $("btn-transfer-ok").addEventListener("click", () => {
+    if ($("transfer-modal").dataset.mode === "export") copyTransferCode();
+    else importTransferCode();
   });
 
   // 区分選択 → 戻る

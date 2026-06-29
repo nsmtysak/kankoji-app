@@ -59,6 +59,18 @@
       <div id="year-review-grid" class="btn-grid"></div>
     </div>
 
+    <div class="card">
+      <div class="section-title">データ引継ぎ</div>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;line-height:1.6;">
+        別の端末へ復習リストを移すには、片方の端末で「書き出す」→ 表示されたコードをコピーし、
+        LINEやメールで自分宛に送って、もう片方の端末の「読み込む」に貼り付けてください。
+      </p>
+      <div class="btn-grid two-col">
+        <button id="btn-export-review" class="btn-secondary">書き出す</button>
+        <button id="btn-import-review" class="btn-secondary">読み込む</button>
+      </div>
+    </div>
+
   </div>
 
   <!-- ══════════════ 区分選択 ══════════════ -->
@@ -170,6 +182,20 @@
   </div>
 
 </main>
+
+<!-- データ引継ぎ モーダル -->
+<div id="transfer-modal" class="hidden">
+  <div id="transfer-overlay"></div>
+  <div id="transfer-dialog">
+    <div id="transfer-title">データ引継ぎ</div>
+    <p id="transfer-desc"></p>
+    <textarea id="transfer-code" rows="4" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+    <div id="transfer-actions">
+      <button id="btn-transfer-cancel" class="btn-ghost">閉じる</button>
+      <button id="btn-transfer-ok" class="btn-primary">コピー</button>
+    </div>
+  </div>
+</div>
 
 <!-- 問題番号ジャンプ モーダル -->
 <div id="jump-modal" class="hidden">

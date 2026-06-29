@@ -3,25 +3,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問1 地球環境（正解3）────────────────────────────────
   {
-    id: "r5-a-1-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-1-1", year: "令和5年度", section: "A", type: "ox",
     question: "温室効果ガスとは、二酸化炭素、メタン等で、『地球温暖化対策の推進に関する法律』には、対象とするガスが定義されている。",
     answer: true, choices: [],
     explanation: "○：温対法では二酸化炭素・メタン・一酸化二窒素・HFC・PFC・SF6等が対象ガスとして定義されている。"
   },
   {
-    id: "r5-a-1-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-1-2", year: "令和5年度", section: "A", type: "ox",
     question: "ハイドロクロロフルオロカーボン（HCFC）は、機器等での使用は禁止されていないが、国内生産は全廃されている。",
     answer: true, choices: [],
     explanation: "○：HCFCはモントリオール議定書に基づき国内生産は全廃されているが、既存機器への補充等の使用はまだ認められている。"
   },
   {
-    id: "r5-a-1-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-1-3", year: "令和5年度", section: "A", type: "ox",
     question: "アンモニアは、オゾン層破壊係数が0の自然冷媒であるが、毒性や可燃性があり地球温暖化係数も大きい。",
     answer: false, choices: [],
     explanation: "×：アンモニアの地球温暖化係数（GWP）は0（ほぼ無視できる）であり、「大きい」は誤り。オゾン層破壊係数0・毒性・可燃性がある点は正しい。"
   },
   {
-    id: "r5-a-1-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-1-4", year: "令和5年度", section: "A", type: "ox",
     question: "温室効果とは、日射エネルギーにより加熱された地表面からの熱放射の一部を、大気中の水蒸気、二酸化炭素等が吸収することで、大気が一定の温度に保たれることをいう。",
     answer: true, choices: [],
     explanation: "○：温室効果の正しい説明。地表面の赤外放射を大気中のCO₂・H₂O等が吸収・再放射することで地球の気温が保たれる。"
@@ -29,25 +29,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問2 温熱環境（正解1）────────────────────────────────
   {
-    id: "r5-a-2-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-2-1", year: "令和5年度", section: "A", type: "ox",
     question: "クロ（clo）は衣服の断熱性を示す単位で、事務室の執務状態では夏が6clo、冬が10clo程度である。",
     answer: false, choices: [],
     explanation: "×：正しくは夏0.6clo・冬1.0clo程度。記述の値は10倍大きく誤り。"
   },
   {
-    id: "r5-a-2-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-2-2", year: "令和5年度", section: "A", type: "ox",
     question: "メット（met）は人体の代謝量を示す単位で、椅座安静状態が1.0metである。",
     answer: true, choices: [],
     explanation: "○：1metは椅座安静状態の代謝量（約58W/m²）を基準とした単位。正しい記述。"
   },
   {
-    id: "r5-a-2-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-2-3", year: "令和5年度", section: "A", type: "ox",
     question: "予想平均申告（PMV）は人体の熱的中立に近い状態の温冷感を予測する指標である。",
     answer: true, choices: [],
     explanation: "○：PMVはFangerの快適方程式から導かれる温冷感の指標で、-3（寒い）〜+3（暑い）の範囲で表される。"
   },
   {
-    id: "r5-a-2-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-2-4", year: "令和5年度", section: "A", type: "ox",
     question: "暑さ指数（WBGT）は暑熱環境下の熱ストレスを評価する指数で、熱中症予防の判断に使われ単位は℃である。",
     answer: true, choices: [],
     explanation: "○：WBGTは湿球・黒球・乾球温度から算出する熱ストレス指標で、単位は℃。熱中症予防の指針値として使用される。"
@@ -55,25 +55,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問3 空気環境（正解4）────────────────────────────────
   {
-    id: "r5-a-3-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-3-1", year: "令和5年度", section: "A", type: "ox",
     question: "燃焼において、空気中の酸素濃度が18.5％を下回ると、不完全燃焼による一酸化炭素の発生量が多くなる。",
     answer: true, choices: [],
     explanation: "○：酸素濃度が不足すると完全燃焼できず不完全燃焼となり、COが多量に発生する。18.5%は一般的な目安値。"
   },
   {
-    id: "r5-a-3-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-3-2", year: "令和5年度", section: "A", type: "ox",
     question: "一酸化炭素は、無色無臭であるが、人体に有害なガスである。",
     answer: true, choices: [],
     explanation: "○：COは無色無臭で感知しにくいが、ヘモグロビンとの親和性がO₂の約250倍あり、極めて有害（一酸化炭素中毒）。"
   },
   {
-    id: "r5-a-3-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-3-3", year: "令和5年度", section: "A", type: "ox",
     question: "窒素酸化物の発生の仕組みには、主なものとして、燃焼空気中の窒素からのサーマルNOxと、燃料中の窒素化合物からのフューエルNOxがある。",
     answer: true, choices: [],
     explanation: "○：NOxは高温燃焼で大気中N₂から生成されるサーマルNOxと、燃料中の窒素分から生成されるフューエルNOxに大別される。"
   },
   {
-    id: "r5-a-3-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-3-4", year: "令和5年度", section: "A", type: "ox",
     question: "人体からの二酸化炭素発生量は、作業状態によって変化し、エネルギー代謝量に反比例する。",
     answer: false, choices: [],
     explanation: "×：作業が激しくなると代謝量が増えCO₂発生量も増加するため、比例関係にある。「反比例」は誤り。"
@@ -81,25 +81,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問4 流体（正解1）────────────────────────────────────
   {
-    id: "r5-a-4-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-4-1", year: "令和5年度", section: "A", type: "ox",
     question: "動粘性係数は、粘性係数を流体の速度で除した値であり、粘性の流体運動に及ぼす影響を示す。",
     answer: false, choices: [],
     explanation: "×：動粘性係数ν＝粘性係数μ÷密度ρ。速度ではなく密度で除した値である。"
   },
   {
-    id: "r5-a-4-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-4-2", year: "令和5年度", section: "A", type: "ox",
     question: "ベルヌーイの定理は、流体の持っている運動エネルギー、重力による位置エネルギー及び圧力によるエネルギーの和が流線に沿って一定であることを示している。",
     answer: true, choices: [],
     explanation: "○：ベルヌーイの定理の正しい説明。非粘性・非圧縮流体の定常流において成立する。"
   },
   {
-    id: "r5-a-4-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-4-3", year: "令和5年度", section: "A", type: "ox",
     question: "水の粘性係数は、圧力が一定の場合、水温の低下とともに大きくなる。",
     answer: true, choices: [],
     explanation: "○：液体の粘性係数は温度が低下するほど大きくなる（分子間力が増す）。水では約0℃で約1.8mPa・s、100℃で約0.28mPa・s。"
   },
   {
-    id: "r5-a-4-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-4-4", year: "令和5年度", section: "A", type: "ox",
     question: "空気の粘性係数は、圧力が一定の場合、温度の低下とともに小さくなる。",
     answer: true, choices: [],
     explanation: "○：気体の粘性係数は温度が上がると大きくなり（分子の運動が活発化）、温度が低下すると小さくなる。液体とは逆の傾向。"
@@ -107,7 +107,7 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問5 圧力損失（計算問題）────────────────────────────
   {
-    id: "r5-a-5", year: "令和5年", section: "A", type: "choice",
+    id: "r5-a-5", year: "令和5年度", section: "A", type: "choice",
     question: "流体が直管路を流れている場合、流速が3倍となったとき、摩擦による圧力損失の変化後の倍率として、適当なものはどれか。ただし、圧力損失はダルシー・ワイスバッハの式によるものとし、流速以外は同じとする。",
     answer: 3,
     choices: ["1/9倍", "1/3倍", "3倍", "9倍"],
@@ -116,25 +116,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問6 ウォーターハンマー（正解1）──────────────────────
   {
-    id: "r5-a-6-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-6-1", year: "令和5年度", section: "A", type: "ox",
     question: "ウォーターハンマーにおいて、流体の流速と圧力上昇は反比例する。",
     answer: false, choices: [],
     explanation: "×：ジュコフスキーの式 ΔP＝ρaΔV より、流速変化量が大きいほど圧力上昇も大きくなる（比例関係）。反比例は誤り。"
   },
   {
-    id: "r5-a-6-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-6-2", year: "令和5年度", section: "A", type: "ox",
     question: "ウォーターハンマーにおいて、ジュコフスキーの式により圧力上昇は求められる。",
     answer: true, choices: [],
     explanation: "○：ジュコフスキーの式 ΔP＝ρ・a・ΔV（ρ：流体密度、a：圧力波の伝播速度、ΔV：流速変化量）で圧力上昇を求める。"
   },
   {
-    id: "r5-a-6-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-6-3", year: "令和5年度", section: "A", type: "ox",
     question: "ウォーターハンマーは、鋼管より硬質塩化ビニル管の方が発生しにくい。",
     answer: true, choices: [],
     explanation: "○：硬質塩化ビニル管は鋼管に比べ管壁の弾性が大きく、圧力波の伝播速度が低いためウォーターハンマーが発生しにくい。"
   },
   {
-    id: "r5-a-6-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-6-4", year: "令和5年度", section: "A", type: "ox",
     question: "ウォーターハンマーにおいて、流体の密度が大きいほど、圧力上昇は大きくなる。",
     answer: true, choices: [],
     explanation: "○：ジュコフスキーの式 ΔP＝ρ・a・ΔV より、密度ρが大きいほど圧力上昇ΔPも大きくなる。"
@@ -142,25 +142,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問7 熱（正解3）──────────────────────────────────────
   {
-    id: "r5-a-7-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-7-1", year: "令和5年度", section: "A", type: "ox",
     question: "比熱比は定圧比熱を定容比熱で除した値で、気体では常に1より大きい。",
     answer: true, choices: [],
     explanation: "○：比熱比κ＝Cp/Cv。気体ではCp＞Cvのため常にκ＞1。空気は約1.4。"
   },
   {
-    id: "r5-a-7-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-7-2", year: "令和5年度", section: "A", type: "ox",
     question: "エンタルピーは内部エネルギーに外部への体積膨張仕事量を加えたもので表される。",
     answer: true, choices: [],
     explanation: "○：エンタルピーH＝U＋PV（U：内部エネルギー、P：圧力、V：体積）。正しい定義。"
   },
   {
-    id: "r5-a-7-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-7-3", year: "令和5年度", section: "A", type: "ox",
     question: "エントロピーは不可逆変化が生じると必ず減少する。",
     answer: false, choices: [],
     explanation: "×：熱力学第二法則より、不可逆変化が生じると閉じた系のエントロピーは増大する（dS≥0）。「減少する」は誤り。"
   },
   {
-    id: "r5-a-7-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-7-4", year: "令和5年度", section: "A", type: "ox",
     question: "カルノーサイクルは等温膨張、断熱膨張、等温圧縮、断熱圧縮の4つの過程からなる。",
     answer: true, choices: [],
     explanation: "○：カルノーサイクルの4過程の正しい説明。最も効率的な理論的サイクル。"
@@ -168,25 +168,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問8 伝熱（正解2）────────────────────────────────────
   {
-    id: "r5-a-8-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-8-1", year: "令和5年度", section: "A", type: "ox",
     question: "熱放射は、電磁波で熱エネルギーが移動する現象であり、その伝達には媒体の存在を必要とせず真空中でも生じる。",
     answer: true, choices: [],
     explanation: "○：熱放射（輻射）は電磁波による熱移動で媒体不要。真空中でも伝達される（例：太陽エネルギー）。"
   },
   {
-    id: "r5-a-8-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-8-2", year: "令和5年度", section: "A", type: "ox",
     question: "流体内において、温度の不均一に基づく密度差で浮力が生じ、流動が起こる場合の熱移動を強制対流熱伝達という。",
     answer: false, choices: [],
     explanation: "×：密度差による自然な流動は「自然対流熱伝達」。強制対流熱伝達はポンプ・ファン等で機械的に流動させる場合をいう。"
   },
   {
-    id: "r5-a-8-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-8-3", year: "令和5年度", section: "A", type: "ox",
     question: "均質な固体内部において熱伝導により移動する熱量は、その固体内の温度勾配に比例する。",
     answer: true, choices: [],
     explanation: "○：フーリエの法則 q＝-λ(dT/dx)より、熱流束は温度勾配に比例する。"
   },
   {
-    id: "r5-a-8-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-8-4", year: "令和5年度", section: "A", type: "ox",
     question: "伝熱現象には、熱伝導、対流及び熱放射がある。",
     answer: true, choices: [],
     explanation: "○：伝熱の三形態（熱伝導・対流熱伝達・熱放射）の正しい説明。"
@@ -194,25 +194,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問9 冷却（正解4）────────────────────────────────────
   {
-    id: "r5-a-9-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-9-1", year: "令和5年度", section: "A", type: "ox",
     question: "冷媒を使用した冷却は、冷媒が蒸発する際に必要な熱を冷却する物体から奪うことによりおこる。",
     answer: true, choices: [],
     explanation: "○：冷媒が蒸発する際に周囲から蒸発潜熱を奪い、被冷却物の温度を下げる原理の正しい説明。"
   },
   {
-    id: "r5-a-9-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-9-2", year: "令和5年度", section: "A", type: "ox",
     question: "冷媒に使用される主なものには、アンモニア、フロン類、水等がある。",
     answer: true, choices: [],
     explanation: "○：アンモニア（自然冷媒）、各種フロン類（HFC等）、水（吸収冷凍機の冷媒）はいずれも代表的な冷媒。"
   },
   {
-    id: "r5-a-9-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-9-3", year: "令和5年度", section: "A", type: "ox",
     question: "蒸発した冷媒を液化するためには、圧縮機を用いて機械的に圧縮する方法や吸収剤等により吸収する方法がある。",
     answer: true, choices: [],
     explanation: "○：蒸気圧縮式（圧縮機）と吸収式（吸収剤）の二方式の正しい説明。"
   },
   {
-    id: "r5-a-9-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-9-4", year: "令和5年度", section: "A", type: "ox",
     question: "単段圧縮冷凍サイクルでは、蒸発温度を高く、凝縮温度を低くすると成績係数（COP）は小さくなる。",
     answer: false, choices: [],
     explanation: "×：蒸発温度↑・凝縮温度↓にすると冷凍効果↑・圧縮仕事↓となり、COPは大きくなる。「小さくなる」は誤り。"
@@ -220,25 +220,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問10 腐食（正解3）───────────────────────────────────
   {
-    id: "r5-a-10-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-10-1", year: "令和5年度", section: "A", type: "ox",
     question: "異種金属接触腐食とは、貴な金属と卑な金属が水中等で接触することにより、卑な金属が腐食することをいう。",
     answer: true, choices: [],
     explanation: "○：ガルバニック腐食（異種金属接触腐食）の正しい説明。イオン化傾向の大きい（卑な）金属が腐食される。"
   },
   {
-    id: "r5-a-10-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-10-2", year: "令和5年度", section: "A", type: "ox",
     question: "開放系配管における炭素鋼の腐食速度は、水温の上昇とともに増加し80℃あたりを境に減少する。",
     answer: true, choices: [],
     explanation: "○：炭素鋼の腐食速度は溶存酸素量と温度の影響を受け、80℃付近で溶存酸素が減少するため腐食速度が逆転する。"
   },
   {
-    id: "r5-a-10-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-10-3", year: "令和5年度", section: "A", type: "ox",
     question: "炭素鋼は、管内流速が速くなると腐食速度は減少するが、金属表面の不動態化が促進される流速域だけは腐食速度が増加する。",
     answer: false, choices: [],
     explanation: "×：正しくは「流速増加とともに腐食速度は増加（酸素供給増加）するが、不動態化が促進される流速域では腐食速度が減少する」。増加・減少が逆。"
   },
   {
-    id: "r5-a-10-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-10-4", year: "令和5年度", section: "A", type: "ox",
     question: "すきま腐食とは、配管のフランジ接合部等のわずかなすきま部において酸素濃淡電池を構成し腐食を起こすことをいう。",
     answer: true, choices: [],
     explanation: "○：すきま腐食の正しい説明。すきまの内外で酸素濃度差が生じ、酸素濃度の低いすきま内部が腐食される。"
@@ -246,25 +246,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問11 電気設備工事（正解4）──────────────────────────
   {
-    id: "r5-a-11-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-11-1", year: "令和5年度", section: "A", type: "ox",
     question: "金属管工事における三相3線式回路の電線は、1回路の電線全部を同一の金属管内に収める。",
     answer: true, choices: [],
     explanation: "○：交流回路では同一回路の電線を同一管内に収めることで電磁誘導による加熱を防止する。"
   },
   {
-    id: "r5-a-11-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-11-2", year: "令和5年度", section: "A", type: "ox",
     question: "CD管（合成樹脂製可とう電線管）は、一般的に、直接コンクリートに埋め込んで施設する。",
     answer: true, choices: [],
     explanation: "○：CD管（Combined Duct）はオレンジ色でコンクリート埋設専用。露出や二重天井内には使用不可（自消性なし）。"
   },
   {
-    id: "r5-a-11-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-11-3", year: "令和5年度", section: "A", type: "ox",
     question: "電線の接続は、管内で行わず、プルボックス等の内部で行う。",
     answer: true, choices: [],
     explanation: "○：管内での電線接続は電気設備技術基準で禁止。接続はプルボックスやジョイントボックス内で行う。"
   },
   {
-    id: "r5-a-11-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-11-4", year: "令和5年度", section: "A", type: "ox",
     question: "PF管（合成樹脂製可とう電線管）相互の接続は、直接接続（突き合わせ）とする。",
     answer: false, choices: [],
     explanation: "×：PF管相互の接続にはカップリング（専用継手）を使用する。直接接続（突き合わせ）は不可。"
@@ -272,25 +272,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問12 三相誘導電動機（正解2）────────────────────────
   {
-    id: "r5-a-12-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-12-1", year: "令和5年度", section: "A", type: "ox",
     question: "三相誘導電動機において、インバータ制御は高調波が発生するため、フィルタ等の高調波対策が必要である。",
     answer: true, choices: [],
     explanation: "○：インバータは高調波を発生させるため、系統への影響を防ぐフィルタや高調波抑制対策が必要。"
   },
   {
-    id: "r5-a-12-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-12-2", year: "令和5年度", section: "A", type: "ox",
     question: "三相誘導電動機の直入れ始動方式では、一般的に、始動電流は定格電流の2倍程度となる。",
     answer: false, choices: [],
     explanation: "×：直入れ始動（全電圧始動）では始動電流は定格電流の5〜7倍程度になる。「2倍程度」は誤り。"
   },
   {
-    id: "r5-a-12-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-12-3", year: "令和5年度", section: "A", type: "ox",
     question: "三相誘導電動機において、出力が0.2kW以下の場合は、過負荷保護装置を設けなくてもよい。",
     answer: true, choices: [],
     explanation: "○：電気設備技術基準により、0.2kW以下の低出力電動機は過負荷保護装置の省略が認められている。"
   },
   {
-    id: "r5-a-12-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-12-4", year: "令和5年度", section: "A", type: "ox",
     question: "三相誘導電動機において、三相の電線のうちいずれかの2線を入れ替えると、回転方向が逆向きになる。",
     answer: true, choices: [],
     explanation: "○：三相電源の2線を入れ替えると回転磁界の向きが逆になり、電動機の回転方向が逆転する。"
@@ -298,25 +298,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問13 鉄筋コンクリート造（正解1）───────────────────
   {
-    id: "r5-a-13-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-13-1", year: "令和5年度", section: "A", type: "ox",
     question: "鉄筋コンクリート造において、柱の鉄筋のかぶり厚さは、主筋の外側からコンクリートの表面までの最短距離をいう。",
     answer: false, choices: [],
     explanation: "×：かぶり厚さは最外端の鉄筋（帯筋・フープ筋）の外面からコンクリート表面までの最短距離をいう。主筋ではなく帯筋が基準。"
   },
   {
-    id: "r5-a-13-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-13-2", year: "令和5年度", section: "A", type: "ox",
     question: "鉄筋コンクリート造において、耐震壁は地震に対して有効であり、バランスよく配置しなければならない。",
     answer: true, choices: [],
     explanation: "○：耐震壁（剪断壁）は地震力に抵抗する重要な構造要素。偏在すると建物がねじれ破壊するため、バランス配置が必要。"
   },
   {
-    id: "r5-a-13-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-13-3", year: "令和5年度", section: "A", type: "ox",
     question: "鉄筋コンクリート造において、コンクリート壁の特定の箇所にひび割れを集中させるために設ける目地を、ひび割れ誘発目地という。",
     answer: true, choices: [],
     explanation: "○：ひび割れ誘発目地は断面を意図的に弱くして、ひび割れを特定位置に集中させる制御目地。正しい説明。"
   },
   {
-    id: "r5-a-13-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-13-4", year: "令和5年度", section: "A", type: "ox",
     question: "鉄筋コンクリート造において、鉄筋とコンクリートは、常温では線膨張係数がほぼ等しい。",
     answer: true, choices: [],
     explanation: "○：鉄筋とコンクリートの線膨張係数は共に約10×10⁻⁶/℃でほぼ等しく、温度変化による剥離が生じにくい。"
@@ -324,25 +324,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問14 鉄筋コンクリート造の梁（正解2）────────────────
   {
-    id: "r5-a-14-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-14-1", year: "令和5年度", section: "A", type: "ox",
     question: "鉄筋コンクリート造の梁において、同じ大きさの二つの梁貫通孔の中心間隔は、梁貫通孔の径の3倍以上とする。",
     answer: true, choices: [],
     explanation: "○：梁貫通孔を複数設ける場合、孔の中心間隔は孔径の3倍以上確保し、構造耐力の低下を防ぐ。"
   },
   {
-    id: "r5-a-14-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-14-2", year: "令和5年度", section: "A", type: "ox",
     question: "鉄筋コンクリート造の梁において、梁貫通孔の径の大きさは梁せいの1/2以下とする。",
     answer: false, choices: [],
     explanation: "×：梁貫通孔の径は梁せいの1/3以下が正しい基準。1/2は過大で梁の耐力が大きく低下するため誤り。"
   },
   {
-    id: "r5-a-14-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-14-3", year: "令和5年度", section: "A", type: "ox",
     question: "鉄筋コンクリート造の梁において、梁の側面のせき板は、コンクリートの圧縮強度が5N/mm²以上で取り外すことができる。",
     answer: true, choices: [],
     explanation: "○：梁側面（支保工ではない）のせき板は、コンクリート圧縮強度が5N/mm²以上になれば取り外せる。"
   },
   {
-    id: "r5-a-14-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-14-4", year: "令和5年度", section: "A", type: "ox",
     question: "鉄筋コンクリート造の梁において、梁の幅止め筋は、コンクリート打設時にあばら筋（スターラップ）のはらみを防止する。",
     answer: true, choices: [],
     explanation: "○：幅止め筋は打設時のコンクリート側圧によるあばら筋の外側への変形（はらみ）を防止する。"
@@ -350,25 +350,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問15 建築計画・省エネ（正解1）─────────────────────
   {
-    id: "r5-a-15-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-15-1", year: "令和5年度", section: "A", type: "ox",
     question: "夏期の省エネルギーの観点から、建物の平面形状が長方形の場合、長辺が東西面となるように計画する。",
     answer: false, choices: [],
     explanation: "×：東西面は日射の影響を受けやすく夏期に不利。省エネには長辺を南北方向（東西面積を最小化）に向け、東西への日射を抑えるのが正しい。"
   },
   {
-    id: "r5-a-15-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-15-2", year: "令和5年度", section: "A", type: "ox",
     question: "夏期の省エネルギーの観点から、外壁面積に対する窓面積の比率を小さくする。",
     answer: true, choices: [],
     explanation: "○：窓は壁より断熱性が低く日射熱取得も大きい。窓比率を小さくすることで夏期冷房負荷を低減できる。"
   },
   {
-    id: "r5-a-15-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-15-3", year: "令和5年度", section: "A", type: "ox",
     question: "夏期の省エネルギーの観点から、外壁の色は日射吸収率の小さい白色系とする。",
     answer: true, choices: [],
     explanation: "○：白色系は日射反射率が高く吸収率が低いため、外壁表面温度の上昇を抑え夏期冷房負荷を軽減する。"
   },
   {
-    id: "r5-a-15-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-15-4", year: "令和5年度", section: "A", type: "ox",
     question: "夏期の省エネルギーの観点から、外壁の塗装には、太陽光の赤外線を反射し、建物の温度上昇の抑制に効果のある塗料を使用する。",
     answer: true, choices: [],
     explanation: "○：遮熱塗料（近赤外線反射塗料）は太陽光の赤外成分を反射し外壁表面温度の上昇を抑える。省エネ効果がある。"
@@ -376,25 +376,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問16 空気調和方式（正解2）──────────────────────────
   {
-    id: "r5-a-16-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-16-1", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和方式において、ペリメーター空気処理方式は、コールドドラフトの防止に有効である。",
     answer: true, choices: [],
     explanation: "○：ペリメーター空気処理方式は窓下等のペリメーター部に温風を供給し、コールドドラフトを防止する。"
   },
   {
-    id: "r5-a-16-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-16-2", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和方式において、床吹出し方式は、暖房運転時の居住域における垂直方向の温度差が大きい。",
     answer: false, choices: [],
     explanation: "×：床吹出し方式で垂直温度差が問題となるのは冷房時。暖房時は温熱空気が上昇して均一に分布するため温度差は小さい。"
   },
   {
-    id: "r5-a-16-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-16-3", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和方式において、定風量単一ダクト方式は、各室で時刻別負荷変動パターンが異なる場合、各室間で温度のアンバランスが生じやすい。",
     answer: true, choices: [],
     explanation: "○：定風量単一ダクト方式は1系統で複数室を処理するため、各室の負荷変動パターンが異なると室間の温度アンバランスが生じやすい。"
   },
   {
-    id: "r5-a-16-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-16-4", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和方式において、ファンコイルユニット・ダクト併用方式は、全空気方式に比べ、外気冷房の効果が得にくい。",
     answer: true, choices: [],
     explanation: "○：ファンコイルユニット・ダクト併用方式は外気導入量が少ないため、全空気方式と比べて外気冷房（フリークーリング）の効果が得にくい。"
@@ -402,25 +402,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問17 空調系統区分とゾーニング（正解1）──────────────
   {
-    id: "r5-a-17-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-17-1", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和計画における系統区分の組合せとして、ペリメーターゾーン系統とインテリアゾーン系統の区分は、空気清浄度別ゾーニングである。",
     answer: false, choices: [],
     explanation: "×：ペリメーターとインテリアの区分は外皮熱負荷の有無による「負荷傾向別ゾーニング」。空気清浄度別ではない。"
   },
   {
-    id: "r5-a-17-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-17-2", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和計画における系統区分の組合せとして、一般事務室系統と会議室系統の区分は、使用時間別ゾーニングである。",
     answer: true, choices: [],
     explanation: "○：一般事務室と会議室では使用時間帯・パターンが異なるため、使用時間別ゾーニングとして区分するのは適切。"
   },
   {
-    id: "r5-a-17-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-17-3", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和計画における系統区分の組合せとして、一般事務室系統とサーバー室系統の区分は、温湿度条件別ゾーニングである。",
     answer: true, choices: [],
     explanation: "○：サーバー室は一般事務室と異なる温湿度・24時間空調条件が必要なため、温湿度条件別ゾーニングとして区分するのは適切。"
   },
   {
-    id: "r5-a-17-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-17-4", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和計画における系統区分の組合せとして、一般事務室系統と食堂系統の区分は、負荷傾向別ゾーニングである。",
     answer: true, choices: [],
     explanation: "○：食堂は一般事務室と発熱・臭気・使用時間等の負荷傾向が大きく異なるため、負荷傾向別ゾーニングとして区分するのは適切。"
@@ -428,25 +428,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問18 熱負荷（正解4）────────────────────────────────
   {
-    id: "r5-a-18-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-18-1", year: "令和5年度", section: "A", type: "ox",
     question: "熱負荷において、実効温度差は地域、方位、時刻だけではなく壁体の断面構成によっても異なる。",
     answer: true, choices: [],
     explanation: "○：実効温度差（ETD）は外気・日射条件と壁体の熱容量・断面構成の両方に依存する。"
   },
   {
-    id: "r5-a-18-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-18-2", year: "令和5年度", section: "A", type: "ox",
     question: "熱負荷において、サッシからの隙間風負荷は、室内を正圧に保つことができる場合は見込まなくてよい。",
     answer: true, choices: [],
     explanation: "○：室内が外部に対して正圧であれば隙間から外気が侵入しないため、隙間風による熱負荷は見込まなくてよい。"
   },
   {
-    id: "r5-a-18-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-18-3", year: "令和5年度", section: "A", type: "ox",
     question: "熱負荷において、熱伝導率は物質に固有な物性値であり、その単位はW/(m・K)である。",
     answer: true, choices: [],
     explanation: "○：熱伝導率λの単位はW/(m・K)。物質固有の値で温度等により変化するが、基本的に物性値として扱われる。"
   },
   {
-    id: "r5-a-18-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-18-4", year: "令和5年度", section: "A", type: "ox",
     question: "熱負荷において、熱通過率は壁体の構造が同じであれば、その表面における気流の速度には影響されない。",
     answer: false, choices: [],
     explanation: "×：熱通過率は熱伝達率を含み、熱伝達率は表面の気流速度によって変化する。よって気流速度の影響を受ける。"
@@ -454,25 +454,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問19 空調自動制御（正解3）──────────────────────────
   {
-    id: "r5-a-19-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-19-1", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和設備の自動制御において、外気取入れダンパーは、空気調和機の運転開始時に一定時間を閉とする。",
     answer: true, choices: [],
     explanation: "○：始動時に外気を閉じることでプレヒート・プレクールを行い、立ち上がり時の負荷を軽減する。"
   },
   {
-    id: "r5-a-19-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-19-2", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和設備の自動制御において、CO₂濃度制御は、CO₂濃度センサーと外気ダンパーにより外気導入量を制御し、室内のCO₂濃度を設定した値にする。",
     answer: true, choices: [],
     explanation: "○：需要制御換気（DCV）の正しい説明。在室人数に応じてCO₂濃度を検出し外気量を最適制御する。"
   },
   {
-    id: "r5-a-19-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-19-3", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和設備の自動制御において、冷却塔の送風機は、外気温度により二位置制御とする。",
     answer: false, choices: [],
     explanation: "×：冷却塔の送風機は冷却水出口温度（または入口温度）を検出して制御する。外気温度ではない。"
   },
   {
-    id: "r5-a-19-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-19-4", year: "令和5年度", section: "A", type: "ox",
     question: "空気調和設備の自動制御において、冷凍機の台数制御は、運転時間や運転回数が均等となるようにローテーションを行う。",
     answer: true, choices: [],
     explanation: "○：複数台の冷凍機をローテーション運転することで、機器の均等劣化と効率的な運用が図られる。"
@@ -480,25 +480,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問20 コージェネレーション（正解4）──────────────────
   {
-    id: "r5-a-20-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-20-1", year: "令和5年度", section: "A", type: "ox",
     question: "コージェネレーションシステムの発電システムは、所定の条件を満たせば消防法における非常電源として兼用が可能である。",
     answer: true, choices: [],
     explanation: "○：コージェネシステムは一定条件（並列運転可能・30分以上継続運転等）を満たせば消防法上の非常電源として認められる。"
   },
   {
-    id: "r5-a-20-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-20-2", year: "令和5年度", section: "A", type: "ox",
     question: "コージェネレーションシステムは、排熱を高温から低温に向けて順次多段階に活用するカスケード利用を行うように配慮する。",
     answer: true, choices: [],
     explanation: "○：カスケード利用は排熱を高温から順に有効活用することでエネルギー効率を最大化する考え方。"
   },
   {
-    id: "r5-a-20-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-20-3", year: "令和5年度", section: "A", type: "ox",
     question: "コージェネレーションシステムにおける受電並列運転（系統連系）は、コージェネレーションシステムによる電力と商用電力を接続し、一体的に供給する方式である。",
     answer: true, choices: [],
     explanation: "○：系統連系はコージェネ発電と商用電力を並列接続し、負荷変動を商用電力で補う方式。正しい説明。"
   },
   {
-    id: "r5-a-20-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-20-4", year: "令和5年度", section: "A", type: "ox",
     question: "燃料電池を用いるコージェネレーションシステムは、原動機を用いるコージェネレーションシステムと比べて発電効率が低い。",
     answer: false, choices: [],
     explanation: "×：燃料電池（固体高分子型・固体酸化物型等）の発電効率は40〜60%で、ガスエンジン（24〜42%）等の原動機より高い。"
@@ -506,25 +506,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問21 ヒートポンプ（正解3）──────────────────────────
   {
-    id: "r5-a-21-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-21-1", year: "令和5年度", section: "A", type: "ox",
     question: "ヒートポンプにおいて、電気式の場合、除霜運転は、一般的に、四方弁を冷房サイクルに切り替えて行う。",
     answer: true, choices: [],
     explanation: "○：ホットガスデフロスト方式。四方弁を冷房サイクルに切り替え、高温の冷媒ガスを室外機（蒸発器）に流して霜を溶かす。"
   },
   {
-    id: "r5-a-21-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-21-2", year: "令和5年度", section: "A", type: "ox",
     question: "ヒートポンプにおいて、暖房では、圧縮された冷媒が凝縮器で放熱する熱エネルギーを使用する。",
     answer: true, choices: [],
     explanation: "○：ヒートポンプ暖房では圧縮機で昇圧された高温高圧の冷媒が凝縮器（室内機）で放熱し、暖房に利用される。"
   },
   {
-    id: "r5-a-21-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-21-3", year: "令和5年度", section: "A", type: "ox",
     question: "ヒートポンプにおいて、空気熱源では、外気温度が高くなると暖房能力が低下する。",
     answer: false, choices: [],
     explanation: "×：空気熱源ヒートポンプは外気温度が低くなると蒸発温度が下がり暖房能力が低下する。外気温が高くなると暖房能力は向上する。"
   },
   {
-    id: "r5-a-21-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-21-4", year: "令和5年度", section: "A", type: "ox",
     question: "ヒートポンプにおいて、地下水等の熱を利用する場合の適応条件としては、容易に得られること、量が豊富でその時間的変化が少ないこと等があげられる。",
     answer: true, choices: [],
     explanation: "○：地下水熱源の適応条件として、採取の容易性・水量の安定性・時間的変動の少なさが重要。正しい説明。"
@@ -532,7 +532,7 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問22 換気量計算式（数式選択・正解3）────────────────
   {
-    id: "r5-a-22", year: "令和5年", section: "A", type: "choice",
+    id: "r5-a-22", year: "令和5年度", section: "A", type: "choice",
     question: "空気清浄装置（捕集率η）を介した外気で室の換気を行う場合、定常状態における換気量Vの計算式として、適当なものはどれか。（V：換気量[m³/h]、M：室内汚染物質発生量[mg/h]、C：室内汚染物質濃度[mg/m³]、C₀：外気汚染物質濃度[mg/m³]、η：空気清浄装置の汚染物質捕集率）",
     answer: 1,
     choices: [
@@ -546,7 +546,7 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問23 換気量計算（計算問題・正解3）──────────────────
   {
-    id: "r5-a-23", year: "令和5年", section: "A", type: "choice",
+    id: "r5-a-23", year: "令和5年度", section: "A", type: "choice",
     question: "エレベーター機械室において発生した熱を、換気設備によって排除するのに必要な最小換気量として、適当なものはどれか。ただし、エレベーター機器の発熱量は6kW、エレベーター機械室の許容温度は40℃、外気温度は35℃、空気の定圧比熱は1.0kJ/(kg・K)、空気の密度は1.2kg/m³とする。",
     answer: 2,
     choices: ["1,800m³/h", "2,400m³/h", "3,600m³/h", "4,000m³/h"],
@@ -555,25 +555,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問24 排煙設備（正解1）───────────────────────────────
   {
-    id: "r5-a-24-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-24-1", year: "令和5年度", section: "A", type: "ox",
     question: "排煙ダクトは、可燃物から100mm以上離すか、又は厚さ50mm以上の金属以外の不燃材料で覆うものとする。",
     answer: false, choices: [],
     explanation: "×：正しくは可燃物から150mm以上の離隔、または厚さ100mm以上の不燃材料での被覆。100mm/50mmは規定値より小さく誤り。"
   },
   {
-    id: "r5-a-24-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-24-2", year: "令和5年度", section: "A", type: "ox",
     question: "排煙ダクトに設ける防火ダンパーは、作動温度280℃のものを使用する。",
     answer: true, choices: [],
     explanation: "○：排煙ダクトの防火ダンパーは通常の72℃ではなく、280℃の温度ヒューズ型を使用する（火災時の排煙機能維持のため）。"
   },
   {
-    id: "r5-a-24-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-24-3", year: "令和5年度", section: "A", type: "ox",
     question: "排煙口の吸込み風速は10m/s以下、ダクト内風速は20m/s以下となるようにする。",
     answer: true, choices: [],
     explanation: "○：建築基準法に基づく排煙設備の設計基準。排煙口吸込み風速10m/s以下・ダクト内風速20m/s以下。"
   },
   {
-    id: "r5-a-24-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-24-4", year: "令和5年度", section: "A", type: "ox",
     question: "排煙口の同時開放条件を設定する場合、通常は隣接する2防煙区画が同時開放するものとする。",
     answer: true, choices: [],
     explanation: "○：機械排煙設備の設計では、隣接する2防煙区画が同時開放することを前提に排煙機風量を設定する。"
@@ -581,25 +581,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問25 排煙設備（正解3）───────────────────────────────
   {
-    id: "r5-a-25-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-25-1", year: "令和5年度", section: "A", type: "ox",
     question: "機械排煙設備において、特別避難階段の付室を兼用する非常用エレベーターの乗降ロビーの排煙機風量は、6m³/s以上とする。",
     answer: true, choices: [],
     explanation: "○：建築基準法施行令の規定による。特別避難階段付室兼用の非常用エレベーター乗降ロビーは6m³/s以上。"
   },
   {
-    id: "r5-a-25-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-25-2", year: "令和5年度", section: "A", type: "ox",
     question: "防煙垂れ壁は、原則として、天井面より50cm以上下方に突出した不燃材料で造られたものとする。",
     answer: true, choices: [],
     explanation: "○：建築基準法施行令第126条の2より、防煙垂れ壁は天井面から50cm以上突出した不燃材料製とする。"
   },
   {
-    id: "r5-a-25-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-25-3", year: "令和5年度", section: "A", type: "ox",
     question: "自然排煙の防煙区画と機械排煙の防煙区画との間は、間仕切区画に代えて垂れ壁による区画としてもよい。",
     answer: false, choices: [],
     explanation: "×：自然排煙区画と機械排煙区画の境界は気流干渉を防ぐため完全な間仕切壁による区画が必要。垂れ壁では代替不可。"
   },
   {
-    id: "r5-a-25-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-25-4", year: "令和5年度", section: "A", type: "ox",
     question: "同一防煙区画内に可動間仕切りがある場合、間仕切られるそれぞれの室に排煙口を設け連動させる。",
     answer: true, choices: [],
     explanation: "○：可動間仕切りで分割される各室に排煙口を設け、連動させることで分割後の各室での排煙を確保する。"
@@ -607,25 +607,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問26 上水道施設（正解2）────────────────────────────
   {
-    id: "r5-a-26-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-26-1", year: "令和5年度", section: "A", type: "ox",
     question: "上水道において、浄水施設には消毒設備を設け、需要家の給水栓における水の残留塩素濃度は、遊離残留塩素の場合0.1mg/L以上保持できるようにする。",
     answer: true, choices: [],
     explanation: "○：水道法施行規則第17条により、給水栓における遊離残留塩素は0.1mg/L（結合塩素は0.4mg/L）以上を維持する。"
   },
   {
-    id: "r5-a-26-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-26-2", year: "令和5年度", section: "A", type: "ox",
     question: "上水道において、取水施設は、取水された原水を浄水施設まで導く施設であり、その方式には自然流下式、ポンプ加圧式及び併用式がある。",
     answer: false, choices: [],
     explanation: "×：原水を浄水施設まで導くのは「導水施設」。取水施設は水源から水を取り入れる施設であり、役割の説明が誤り。"
   },
   {
-    id: "r5-a-26-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-26-3", year: "令和5年度", section: "A", type: "ox",
     question: "上水道において、凝集池には、原水中に浮遊している砂等の粒子を短時間に沈殿除去させるために水道用硫酸アルミニウム等を注入する。",
     answer: true, choices: [],
     explanation: "○：凝集剤（硫酸アルミニウム・PAC等）を注入してコロイド粒子を凝集・フロック化し沈殿させる。"
   },
   {
-    id: "r5-a-26-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-26-4", year: "令和5年度", section: "A", type: "ox",
     question: "上水道において、配水施設は、配水池、ポンプ等で構成され、浄化した水を給水区域の需要家にその必要とする水圧で所要量を配水するための施設である。",
     answer: true, choices: [],
     explanation: "○：配水施設（配水池・配水管・ポンプ等）の役割の正しい説明。"
@@ -633,25 +633,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問27 下水道（正解4）────────────────────────────────
   {
-    id: "r5-a-27-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-27-1", year: "令和5年度", section: "A", type: "ox",
     question: "下水道において、分流式の汚水管きょは、合流式に比べ小口径のため、管きょの勾配が急になり埋設が深くなる場合がある。",
     answer: true, choices: [],
     explanation: "○：分流式汚水管きょは雨水を含まないため小口径になりやすく、自流速確保のため急勾配が必要となり埋設が深くなることがある。"
   },
   {
-    id: "r5-a-27-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-27-2", year: "令和5年度", section: "A", type: "ox",
     question: "下水道において、流域下水道とは、2以上の市町村の区域における下水又は雨水を排除するものをいう。",
     answer: true, choices: [],
     explanation: "○：下水道法第2条第4号による流域下水道の定義の正しい説明。"
   },
   {
-    id: "r5-a-27-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-27-3", year: "令和5年度", section: "A", type: "ox",
     question: "下水道において、管きょ内で必要とする最小流速は、雨水管きょに比べて、汚水管きょの方が小さい。",
     answer: true, choices: [],
     explanation: "○：汚水管きょの最小流速は0.6m/s、雨水管きょ（および合流管きょ）は0.8m/sで、汚水の方が小さい。"
   },
   {
-    id: "r5-a-27-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-27-4", year: "令和5年度", section: "A", type: "ox",
     question: "下水道において、分流式の下水道では、降雨の規模によっては、処理施設を経ない汚水が公共用水域に放流されることがある。",
     answer: false, choices: [],
     explanation: "×：未処理汚水が降雨時に放流されるのは合流式下水道の課題。分流式では汚水と雨水が別系統のため、未処理汚水の放流は起こらない。"
@@ -659,25 +659,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問28 給水設備（正解3）───────────────────────────────
   {
-    id: "r5-a-28-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-28-1", year: "令和5年度", section: "A", type: "ox",
     question: "給水設備において、水道直結増圧ポンプの給水量は、瞬時最大予想給水量以上とする。",
     answer: true, choices: [],
     explanation: "○：直結増圧式給水ポンプは最大需要時にも対応できるよう、瞬時最大予想給水量以上の給水量が必要。"
   },
   {
-    id: "r5-a-28-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-28-2", year: "令和5年度", section: "A", type: "ox",
     question: "給水設備において、受水タンクの有効容量は、一般的に、1日使用水量の半分程度とする。",
     answer: true, choices: [],
     explanation: "○：受水タンクの有効容量は一般に1日使用水量の1/2程度（4〜8時間分）を確保する。"
   },
   {
-    id: "r5-a-28-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-28-3", year: "令和5年度", section: "A", type: "ox",
     question: "給水設備において、高置タンク方式における揚水ポンプの揚水量は、時間平均給水量とする。",
     answer: false, choices: [],
     explanation: "×：高置タンク方式の揚水ポンプは最大需要時に対応するため「時間最大予想給水量」以上で設計する。時間平均ではない。"
   },
   {
-    id: "r5-a-28-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-28-4", year: "令和5年度", section: "A", type: "ox",
     question: "給水設備において、水道直結増圧ポンプの揚程には、配水管内の最低動水圧も関係する。",
     answer: true, choices: [],
     explanation: "○：直結増圧ポンプの必要揚程は、高さ・配管損失・器具必要圧力から配水管の最低動水圧を差し引いた値で決まる。"
@@ -685,25 +685,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問29 給水設備（正解2）───────────────────────────────
   {
-    id: "r5-a-29-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-29-1", year: "令和5年度", section: "A", type: "ox",
     question: "給水設備において、クロスコネクション防止対策として、飲料用給水管と飲料用以外の給水管は、異なる配管材を用いる。",
     answer: true, choices: [],
     explanation: "○：飲料水管と非飲料水管を識別しやすくするため異なる配管材を使用することはクロスコネクション防止策の一つ。"
   },
   {
-    id: "r5-a-29-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-29-2", year: "令和5年度", section: "A", type: "ox",
     question: "給水設備において、器具給水負荷単位法で瞬時最大給水流量を算定する場合、器具給水負荷単位数に器具の個数による同時使用率を乗じて求める。",
     answer: false, choices: [],
     explanation: "×：器具給水負荷単位法は各器具の負荷単位数を合計し、換算表（グラフ）から瞬時最大給水流量を読み取る方法。同時使用率を別途乗じる方法ではない。"
   },
   {
-    id: "r5-a-29-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-29-3", year: "令和5年度", section: "A", type: "ox",
     question: "給水設備において、住戸数から瞬時最大給水流量を算定する場合、住戸数により段階的に算定式が異なる。",
     answer: true, choices: [],
     explanation: "○：空気調和・衛生工学会の算定式では住戸数の規模（少数・中規模・大規模）により異なる式を使用する。"
   },
   {
-    id: "r5-a-29-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-29-4", year: "令和5年度", section: "A", type: "ox",
     question: "給水設備において、水使用時間率と器具給水単位による方法で配管サイズを決定する際は、任意利用形態か集中利用形態かを確認する必要がある。",
     answer: true, choices: [],
     explanation: "○：任意利用（住宅等）と集中利用（劇場・競技場等）では同時使用のパターンが異なるため、区分して算定する必要がある。"
@@ -711,25 +711,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問30 給湯設備（正解1）───────────────────────────────
   {
-    id: "r5-a-30-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-30-1", year: "令和5年度", section: "A", type: "ox",
     question: "給湯設備において、架橋ポリエチレン管の線膨張係数は、ステンレス鋼管の数値よりも小さい。",
     answer: false, choices: [],
     explanation: "×：架橋ポリエチレン管の線膨張係数（約1.7×10⁻⁴/K）はステンレス鋼管（約1.7×10⁻⁵/K）より約10倍大きい。「小さい」は誤り。"
   },
   {
-    id: "r5-a-30-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-30-2", year: "令和5年度", section: "A", type: "ox",
     question: "給湯設備において、真空式温水発生機と無圧式温水発生機は、熱交換方式の違いはあるが特徴が類似しており、水温が100℃を超えることはない。",
     answer: true, choices: [],
     explanation: "○：真空式（缶体内を減圧）と無圧式（大気開放）はいずれも100℃以下で運転し、圧力容器規制の対象外となる。"
   },
   {
-    id: "r5-a-30-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-30-3", year: "令和5年度", section: "A", type: "ox",
     question: "給湯設備において、中央式給湯設備の返湯管径は、循環流量と管内流速により求める。",
     answer: true, choices: [],
     explanation: "○：返湯管（循環管）の管径は設計循環流量と許容流速（通常0.5〜1.0m/s程度）から決定する。"
   },
   {
-    id: "r5-a-30-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-30-4", year: "令和5年度", section: "A", type: "ox",
     question: "給湯設備において、循環配管をリバースリターン方式とすると、最遠端の管路に湯が最もよく循環することになるため採用しない。",
     answer: true, choices: [],
     explanation: "○：リバースリターン方式（逆還水方式）では配管の往き・戻りの合計長を各系統で等しくすることで摩擦損失を均等化し、各系統に均等量の湯を循環させる。設計上は均等循環を確保するために採用が推奨される。"
@@ -737,25 +737,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問31 排水・通気設備（正解3）────────────────────────
   {
-    id: "r5-a-31-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-31-1", year: "令和5年度", section: "A", type: "ox",
     question: "排水・通気設備において、建物・敷地内では汚水と雑排水を同一排水系統とすることを合流式といい、公共下水道では汚水・雑排水・雨水を同一排水系統とすることを合流式という。",
     answer: true, choices: [],
     explanation: "○：建物内の「合流式」と公共下水道の「合流式」でそれぞれ対象が異なる。建物内では雨水を除く汚水・雑排水の合流、公共下水道では雨水も含む合流。"
   },
   {
-    id: "r5-a-31-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-31-2", year: "令和5年度", section: "A", type: "ox",
     question: "排水・通気設備において、器具排水負荷単位は、洗面器の最大排水流量28.5L/minを基準単位1としている。",
     answer: true, choices: [],
     explanation: "○：器具排水負荷単位の基準（1単位）は洗面器の最大排水流量28.5L/min（約0.475L/s）。正しい説明。"
   },
   {
-    id: "r5-a-31-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-31-3", year: "令和5年度", section: "A", type: "ox",
     question: "排水・通気設備において、排水管内の圧力変動により、主に負圧変動によってトラップの封水が排水管側に吸い込まれる現象を自己サイホン作用という。",
     answer: false, choices: [],
     explanation: "×：これは「誘引サイホン（誘導サイホン）」の説明。自己サイホン作用は器具自身の排水がトラップ以降の管を満流で流れる際にサイホン力で封水が吸引される現象。"
   },
   {
-    id: "r5-a-31-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-31-4", year: "令和5年度", section: "A", type: "ox",
     question: "排水・通気設備において、排水・通気用耐火二層管は、硬質ポリ塩化ビニル管に繊維モルタルで被覆したものである。",
     answer: true, choices: [],
     explanation: "○：耐火二層管（外層：繊維モルタル、内層：硬質塩化ビニル管）の正しい説明。防火区画貫通部に使用される。"
@@ -763,25 +763,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問32 排水・通気設備（正解3）────────────────────────
   {
-    id: "r5-a-32-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-32-1", year: "令和5年度", section: "A", type: "ox",
     question: "排水・通気設備において、通気管どうしを接続する場合は、その階における最高位の器具のあふれ縁より150mm以上立ち上げて接続する。",
     answer: true, choices: [],
     explanation: "○：通気管を他の通気管と接続する場合、その階最高位の器具あふれ縁より150mm以上立ち上げてから接続する。"
   },
   {
-    id: "r5-a-32-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-32-2", year: "令和5年度", section: "A", type: "ox",
     question: "排水・通気設備において、ループ通気管の管径は、その排水横枝管と通気立て管の管径のうち、いずれか小さい方の1/2以上とする。",
     answer: true, choices: [],
     explanation: "○：ループ通気管の管径は排水横枝管・通気立て管のいずれか小さい方の管径の1/2以上とする。"
   },
   {
-    id: "r5-a-32-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-32-3", year: "令和5年度", section: "A", type: "ox",
     question: "排水・通気設備において、通気管末端の開口部は、戸や窓その他開口部の上端より400mm以上立ち上げていれば、水平方向の離隔制限はない。",
     answer: false, choices: [],
     explanation: "×：通気管末端は窓・換気口等の上端から600mm以上立ち上げるか、水平距離3m以上離さなければならない。400mmでは不足。"
   },
   {
-    id: "r5-a-32-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-32-4", year: "令和5年度", section: "A", type: "ox",
     question: "排水・通気設備において、器具排水口からトラップウェアまでの垂直距離は600mm以下とする。",
     answer: true, choices: [],
     explanation: "○：器具排水口からトラップウェア（堰の上端）までの落差が大きすぎると自己サイホンが生じやすくなるため、600mm以下とする。"
@@ -789,25 +789,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問33 排水設備（正解4）───────────────────────────────
   {
-    id: "r5-a-33-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-33-1", year: "令和5年度", section: "A", type: "ox",
     question: "排水設備において、排水槽に設置する排水用水中モーターポンプは、一般的に、排水槽の有効貯水量を10〜20分で排出する能力とする。",
     answer: true, choices: [],
     explanation: "○：排水ポンプは排水槽の有効貯水量を10〜20分で排出できる容量とし、短時間での排水処理を確保する。"
   },
   {
-    id: "r5-a-33-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-33-2", year: "令和5年度", section: "A", type: "ox",
     question: "排水設備において、排水用水中モーターポンプは、汚水用、雑排水用及び汚物用に区分され、汚水用は固形物をほとんど含まない水を排水するポンプである。",
     answer: true, choices: [],
     explanation: "○：汚水用ポンプは固形物をほとんど含まない水（洗面・手洗い排水等）向け。汚物用は固形物を含む汚水（大便器排水等）向け。"
   },
   {
-    id: "r5-a-33-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-33-3", year: "令和5年度", section: "A", type: "ox",
     question: "排水設備において、排水ポンプは、一般的に、水中モーターポンプとし、2台一組で設置する。",
     answer: true, choices: [],
     explanation: "○：排水ポンプは故障時のバックアップと交互運転のため2台一組で設置するのが一般的。"
   },
   {
-    id: "r5-a-33-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-33-4", year: "令和5年度", section: "A", type: "ox",
     question: "排水設備において、汚水排水ますの底部には、インバートを設けて、上流側管底と下流側管底の段差がないようにフラットに仕上げる。",
     answer: false, choices: [],
     explanation: "×：汚水排水ますにはインバートを設けるが、流れをスムーズにするため上流より下流を15〜20mm程度低くする落差を設ける。フラットは誤り。"
@@ -815,25 +815,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問34 消火設備（正解1）───────────────────────────────
   {
-    id: "r5-a-34-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-34-1", year: "令和5年度", section: "A", type: "ox",
     question: "消火設備において、屋内消火栓設備は、現場に到着した公設消防隊が使用するために設置されるもので、加圧した水をノズルから噴射させて冷却効果を利用して消火するものである。",
     answer: false, choices: [],
     explanation: "×：屋内消火栓設備は建物の在館者（居住者・従業員等）が初期消火に使用するための設備。公設消防隊が使用するのは連結送水管等。"
   },
   {
-    id: "r5-a-34-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-34-2", year: "令和5年度", section: "A", type: "ox",
     question: "消火設備において、スプリンクラー消火設備は、火災を初期段階で自動的に消火する設備であり、水を消火剤とし、冷却効果を利用して消火するものである。",
     answer: true, choices: [],
     explanation: "○：スプリンクラー消火設備の正しい説明。自動作動・水による冷却消火。"
   },
   {
-    id: "r5-a-34-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-34-3", year: "令和5年度", section: "A", type: "ox",
     question: "消火設備において、泡消火設備は、水と泡原液を混合させて作る泡水溶液を放出し、燃焼物を厚い泡で覆うことで空気を遮断し、窒息と冷却の効果を利用して消火するものである。",
     answer: true, choices: [],
     explanation: "○：泡消火設備の正しい説明。窒息効果と冷却効果を組み合わせる。油火災に有効。"
   },
   {
-    id: "r5-a-34-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-34-4", year: "令和5年度", section: "A", type: "ox",
     question: "消火設備において、不活性ガス消火設備には、イナートガス消火設備と二酸化炭素消火設備があり、不活性ガスを空気中に放出して酸素の容積比を低下させ窒息効果を利用して消火するものである。",
     answer: true, choices: [],
     explanation: "○：不活性ガス消火設備の正しい説明。イナートガス（IG-541等）とCO₂の2種類がある。"
@@ -841,25 +841,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問35 ガス設備（正解1）───────────────────────────────
   {
-    id: "r5-a-35-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-35-1", year: "令和5年度", section: "A", type: "ox",
     question: "ガス設備において、供給ガスの発熱量は、一般的に、総発熱量（高発熱量）から排ガス中の水蒸気が持つ蒸発熱を差し引いた低発熱量で表される。",
     answer: false, choices: [],
     explanation: "×：ガスの発熱量は慣例的に高発熱量（総発熱量・上位発熱量）で表示する。低発熱量で表されるという記述が誤り。"
   },
   {
-    id: "r5-a-35-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-35-2", year: "令和5年度", section: "A", type: "ox",
     question: "ガス設備において、都市ガスの種類は、数字とアルファベットの組合せで表し、A、B、Cは燃焼速度を示しAが最も遅く、B、Cの順で速くなる。",
     answer: true, choices: [],
     explanation: "○：都市ガスの種類（13A、12A等）の記号でアルファベットA＜B＜Cの順で燃焼速度が速くなる。正しい説明。"
   },
   {
-    id: "r5-a-35-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-35-3", year: "令和5年度", section: "A", type: "ox",
     question: "ガス設備において、都市ガス配管の試験は、最高使用圧力以上の圧力で気密試験を行い、漏洩がないことを確認する。",
     answer: true, choices: [],
     explanation: "○：ガス配管の気密試験は最高使用圧力以上の試験圧力で行い、気密性を確認する。"
   },
   {
-    id: "r5-a-35-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-35-4", year: "令和5年度", section: "A", type: "ox",
     question: "ガス設備において、液化石油ガス（LPG）設備に用いる配管は、0.8MPa以上の圧力で行う耐圧試験に合格したものとする。",
     answer: true, choices: [],
     explanation: "○：液化石油ガス設備規則によりLPG配管は0.8MPa以上の耐圧試験に合格したものを使用する。"
@@ -867,25 +867,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問36 浄化槽（正解1）────────────────────────────────
   {
-    id: "r5-a-36-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-36-1", year: "令和5年度", section: "A", type: "ox",
     question: "浄化槽において、浄化槽は、し尿、雑排水、工場排水、雨水等を処理する設備又は施設である。",
     answer: false, choices: [],
     explanation: "×：浄化槽法では「工場廃水、雨水その他の特殊排水を除く」と規定。工場排水・雨水は浄化槽の処理対象外。"
   },
   {
-    id: "r5-a-36-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-36-2", year: "令和5年度", section: "A", type: "ox",
     question: "浄化槽において、浄化槽の生物学的処理には、生物膜法や活性汚泥法がある。",
     answer: true, choices: [],
     explanation: "○：浄化槽の生物処理の2大方式は生物膜法（接触材への生物膜付着）と活性汚泥法（浮遊微生物の利用）。"
   },
   {
-    id: "r5-a-36-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-36-3", year: "令和5年度", section: "A", type: "ox",
     question: "浄化槽において、生物膜法は、接触材に付着した生物膜で浄化する方式であり、回転板接触方式、接触ばっ気方式等がある。",
     answer: true, choices: [],
     explanation: "○：生物膜法の正しい説明。接触材（担体）に生物膜を形成させて有機物を分解する。"
   },
   {
-    id: "r5-a-36-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-36-4", year: "令和5年度", section: "A", type: "ox",
     question: "浄化槽において、活性汚泥法は、水中に浮遊する微生物を利用し浄化する方式であり、長時間ばっ気方式、標準活性汚泥方式等がある。",
     answer: true, choices: [],
     explanation: "○：活性汚泥法の正しい説明。好気性細菌を主体とするフロックを利用して有機物を分解する。"
@@ -893,25 +893,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問37 浄化槽の処理対象人員（正解2）──────────────────
   {
-    id: "r5-a-37-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-37-1", year: "令和5年度", section: "A", type: "ox",
     question: "浄化槽の処理対象人員の算定において、体育館は延べ面積に定数を乗じて算定する。",
     answer: true, choices: [],
     explanation: "○：JIS A 3302「建築物の用途別による屎尿浄化槽の処理対象人員算定基準」により体育館は延べ面積×定数で算定。"
   },
   {
-    id: "r5-a-37-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-37-2", year: "令和5年度", section: "A", type: "ox",
     question: "浄化槽の処理対象人員の算定において、公衆便所は利用人員に定数を乗じて算定する。",
     answer: false, choices: [],
     explanation: "×：公衆便所の処理対象人員はn＝16×c（c：便器数）で算定する。利用人員ではなく便器数が基準。"
   },
   {
-    id: "r5-a-37-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-37-3", year: "令和5年度", section: "A", type: "ox",
     question: "浄化槽の処理対象人員の算定において、事務所は業務用厨房設備の有無により、異なる定数を延べ面積に乗じて算定する。",
     answer: true, choices: [],
     explanation: "○：事務所の処理対象人員算定では業務用厨房の有無で定数（n/m²）が異なる。"
   },
   {
-    id: "r5-a-37-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-37-4", year: "令和5年度", section: "A", type: "ox",
     question: "浄化槽の処理対象人員の算定において、ホテル・旅館は結婚式場又は宴会場の有無により、異なる定数を延べ面積に乗じて算定する。",
     answer: true, choices: [],
     explanation: "○：ホテル・旅館の処理対象人員算定では宴会場・結婚式場の有無で定数が異なる。"
@@ -919,25 +919,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問38 冷凍機（正解4）────────────────────────────────
   {
-    id: "r5-a-38-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-38-1", year: "令和5年度", section: "A", type: "ox",
     question: "冷凍機において、遠心冷凍機の容量制御には、圧縮機に設けた吸込みベーンの開度を変えることで冷媒ガス流入量を制御する吸込みベーン制御がある。",
     answer: true, choices: [],
     explanation: "○：遠心冷凍機（ターボ冷凍機）の代表的な容量制御方式の正しい説明。"
   },
   {
-    id: "r5-a-38-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-38-2", year: "令和5年度", section: "A", type: "ox",
     question: "冷凍機において、蒸気を加熱源とする吸収冷凍機の容量制御には、再生器に入る蒸気量を制御する方法がある。",
     answer: true, choices: [],
     explanation: "○：吸収冷凍機の容量制御は再生器への加熱量（蒸気量や燃焼量）を制御することで行う。"
   },
   {
-    id: "r5-a-38-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-38-3", year: "令和5年度", section: "A", type: "ox",
     question: "冷凍機において、遠心冷凍機は、往復動冷凍機に比べて、負荷変動に対する追従性がよく、容量制御も容易である。",
     answer: true, choices: [],
     explanation: "○：遠心冷凍機はインバータ制御や吸込みベーン制御で容量を連続的に調整でき、追従性・制御性に優れる。"
   },
   {
-    id: "r5-a-38-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-38-4", year: "令和5年度", section: "A", type: "ox",
     question: "冷凍機において、吸収冷凍機は、運転中も機内が大気圧以下のため、加熱源に蒸気を使用する場合でも、圧力容器の規則は適用されない。",
     answer: false, choices: [],
     explanation: "×：吸収冷凍機本体は大気圧以下だが、蒸気を使用する場合の蒸気系統・熱交換器は圧力容器規制の対象となる。"
@@ -945,25 +945,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問39 冷却塔（正解2）────────────────────────────────
   {
-    id: "r5-a-39-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-39-1", year: "令和5年度", section: "A", type: "ox",
     question: "冷却塔において、開放式冷却塔は、冷却水の一部を蒸発させて、その蒸発潜熱により冷却水温度を下げる装置である。",
     answer: true, choices: [],
     explanation: "○：開放式冷却塔の冷却原理の正しい説明。冷却水の一部（約1〜2%/h）が蒸発し潜熱を奪うことで冷却する。"
   },
   {
-    id: "r5-a-39-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-39-2", year: "令和5年度", section: "A", type: "ox",
     question: "冷却塔において、開放式冷却塔には、充填材を通過して滴下する水滴の塔外飛散防止として塔本体の外部側面にエリミネーターを設けている。",
     answer: false, choices: [],
     explanation: "×：エリミネーターは充填材の上方（排気側）に設置し、送風機から排出される空気に含まれる水滴を捕集して飛散を防止する。外部側面ではない。"
   },
   {
-    id: "r5-a-39-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-39-3", year: "令和5年度", section: "A", type: "ox",
     question: "冷却塔において、密閉式冷却塔は、開放式冷却塔に比べて熱交換器等の空気抵抗が大きくなるため、送風機の動力が大きくなる。",
     answer: true, choices: [],
     explanation: "○：密閉式は熱交換器コイルを通して散水するため空気抵抗が大きく、開放式より送風機動力が大きくなる。"
   },
   {
-    id: "r5-a-39-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-39-4", year: "令和5年度", section: "A", type: "ox",
     question: "冷却塔において、外気温度が低い冬季や湿度の高い梅雨期に運転する場合には、周囲の空気より高温で飽和状態に近い冷却塔の吐出し空気が、外気と混合して白煙を発生する場合がある。",
     answer: true, choices: [],
     explanation: "○：冷却塔排気は高温多湿のため、冷たい外気と混合すると水蒸気が凝縮して白煙（白羽根）が発生する。"
@@ -971,25 +971,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問40 全熱交換器（正解2）────────────────────────────
   {
-    id: "r5-a-40-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-40-1", year: "令和5年度", section: "A", type: "ox",
     question: "全熱交換器において、建物からの排気と導入外気を熱交換させ、顕熱と潜熱を同時に熱回収できる装置で省エネルギーが図れる。",
     answer: true, choices: [],
     explanation: "○：全熱交換器は顕熱（温度）と潜熱（湿度）の両方を回収し、換気に伴う空調負荷を低減する省エネ機器。"
   },
   {
-    id: "r5-a-40-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-40-2", year: "令和5年度", section: "A", type: "ox",
     question: "全熱交換器において、回転形全熱交換器は、給気側と排気側をセパレートしたケーシング内にハニカムロータを設置し回転させる構造で、給気と排気は直交方向に流れる。",
     answer: false, choices: [],
     explanation: "×：回転形全熱交換器ではハニカムロータを境に給気と排気は対向方向（向流）に流れる。直交方向は誤り。"
   },
   {
-    id: "r5-a-40-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-40-3", year: "令和5年度", section: "A", type: "ox",
     question: "全熱交換器において、静止形全熱交換器は、給排気を隔てる仕切板と間隔板で構成され、給気と排気は混り合うことはほとんどない。",
     answer: true, choices: [],
     explanation: "○：静止形（プレート型）全熱交換器では仕切板で給排気が分離されており、漏洩はごくわずか。"
   },
   {
-    id: "r5-a-40-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-40-4", year: "令和5年度", section: "A", type: "ox",
     question: "全熱交換器において、回転形全熱交換器は、一般的に、顕熱交換効率と潜熱交換効率はほぼ同じ値である。",
     answer: true, choices: [],
     explanation: "○：回転形ではロータが吸湿・放湿を繰り返すため、顕熱・潜熱の交換効率がほぼ同等になる特性がある。"
@@ -997,25 +997,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問41 配管材料・配管附属品（正解2）──────────────────
   {
-    id: "r5-a-41-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-41-1", year: "令和5年度", section: "A", type: "ox",
     question: "配管材料において、圧力配管用炭素鋼鋼管は、蒸気、高温水等の圧力の高い部分に使用され、スケジュール番号により管の厚さが区分されている。",
     answer: true, choices: [],
     explanation: "○：圧力配管用炭素鋼鋼管（STPG）の正しい説明。Sch40・80等のスケジュール番号で肉厚が区分される。"
   },
   {
-    id: "r5-a-41-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-41-2", year: "令和5年度", section: "A", type: "ox",
     question: "配管材料において、配管用炭素鋼鋼管（白）は、水配管用亜鉛めっき鋼管よりも亜鉛付着量が多いため、耐食性に優れている。",
     answer: false, choices: [],
     explanation: "×：水配管用亜鉛めっき鋼管（SGPW）は配管用炭素鋼鋼管（白）より亜鉛付着量が多く耐食性が高い。記述は逆で誤り。"
   },
   {
-    id: "r5-a-41-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-41-3", year: "令和5年度", section: "A", type: "ox",
     question: "配管材料において、外ねじ式仕切弁は、ハンドルを回転させることにより弁棒が昇降することから、外部から弁の開度を確認することができる。",
     answer: true, choices: [],
     explanation: "○：外ねじ式仕切弁は弁棒が外部に露出して昇降するため、弁棒の突出量で開度を目視確認できる。"
   },
   {
-    id: "r5-a-41-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-41-4", year: "令和5年度", section: "A", type: "ox",
     question: "配管材料において、架橋ポリエチレン管は、中密度・高密度ポリエチレンを架橋反応させることで、耐熱性、耐クリープ性を向上させた管である。",
     answer: true, choices: [],
     explanation: "○：架橋ポリエチレン管の正しい説明。架橋によって分子鎖間に橋かけ構造が形成され、耐熱性・耐クリープ性が向上する。"
@@ -1023,25 +1023,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問42 ダクト・ダクト附属品（正解4）──────────────────
   {
-    id: "r5-a-42-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-42-1", year: "令和5年度", section: "A", type: "ox",
     question: "ダクト設備において、ピストンダンパーは、消火ガス放出時にピストンレリーザーにより自動的に閉鎖する機構を有する。",
     answer: true, choices: [],
     explanation: "○：不活性ガス消火設備等でガス放出時、ピストンダンパーは自動閉鎖してガスが外部に漏れるのを防ぐ。"
   },
   {
-    id: "r5-a-42-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-42-2", year: "令和5年度", section: "A", type: "ox",
     question: "ダクト設備において、グラスウール製ダクトは、ダクト内温度が75℃以下の範囲で使用する。",
     answer: true, choices: [],
     explanation: "○：グラスウール製ダクト（ファイバーグラスダクト）の使用温度上限は75℃。それを超えるとグラスウールが劣化する。"
   },
   {
-    id: "r5-a-42-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-42-3", year: "令和5年度", section: "A", type: "ox",
     question: "ダクト設備において、スパイラルダクトは、亜鉛鉄板をスパイラル状に甲はぜ機械がけしたもので、甲はぜが補強の役目を果たすため強度は高い。",
     answer: true, choices: [],
     explanation: "○：スパイラルダクト（らせん形ダクト）の正しい説明。甲はぜが補強リブとなり、同板厚の角ダクトより強度が高い。"
   },
   {
-    id: "r5-a-42-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-42-4", year: "令和5年度", section: "A", type: "ox",
     question: "ダクト設備において、断面積が等しい円形ダクトと長方形ダクトでは、風量と材質が同じ場合、単位長さ当たりの圧力損失は長方形ダクトのほうが小さい。",
     answer: false, choices: [],
     explanation: "×：同断面積の場合、円形ダクトは周長が最小で水力直径が最大となり、圧力損失が最も小さい。長方形ダクトは角部の乱流で抵抗が大きい。"
@@ -1049,25 +1049,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問43 公共工事標準請負契約約款（正解4）──────────────
   {
-    id: "r5-a-43-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-43-1", year: "令和5年度", section: "A", type: "ox",
     question: "公共工事標準請負契約約款において、発注者が監督員を置いたときは、約款に定める請求、通知、報告、申出、承諾及び解除については、設計図書に定めるものを除き、監督員を経由して行う。",
     answer: true, choices: [],
     explanation: "○：公共工事標準請負契約約款第9条2項の正しい説明。"
   },
   {
-    id: "r5-a-43-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-43-2", year: "令和5年度", section: "A", type: "ox",
     question: "公共工事標準請負契約約款において、発注者は、完成通知を受けたときは、通知を受けた日から14日以内に完成検査を完了し、検査結果を受注者に通知しなければならない。",
     answer: true, choices: [],
     explanation: "○：公共工事標準請負契約約款第31条2項の正しい説明。完成通知後14日以内に完成検査を完了する。"
   },
   {
-    id: "r5-a-43-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-43-3", year: "令和5年度", section: "A", type: "ox",
     question: "公共工事標準請負契約約款において、発注者は完成検査合格後、受注者から請負代金の支払い請求があったときは、請求を受けた日から40日以内に請負代金を支払わなければならない。",
     answer: true, choices: [],
     explanation: "○：公共工事標準請負契約約款第32条1項の正しい説明。支払い請求から40日以内。"
   },
   {
-    id: "r5-a-43-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-43-4", year: "令和5年度", section: "A", type: "ox",
     question: "公共工事標準請負契約約款において、現場代理人、主任技術者は、これを兼ねることができるが、専門技術者は、主任技術者を兼ねることはできない。",
     answer: false, choices: [],
     explanation: "×：約款第10条5項「現場代理人、主任技術者及び専門技術者は、これを兼ねることができる」と規定。専門技術者も主任技術者を兼ねることができる。"
@@ -1075,25 +1075,25 @@ window.QUESTIONS["r5-a"] = [
 
   // ── 問44 配管材料の記号（正解2）────────────────────────
   {
-    id: "r5-a-44-1", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-44-1", year: "令和5年度", section: "A", type: "ox",
     question: "設計図書に記載する配管材料の組合せとして、水道用硬質塩化ビニルライニング鋼管（黒）の規格記号はSGP-VA（JWWA）である。",
     answer: true, choices: [],
     explanation: "○：水道用硬質塩化ビニルライニング鋼管（黒）の規格はJWWA K 116で記号はSGP-VA。正しい組合せ。"
   },
   {
-    id: "r5-a-44-2", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-44-2", year: "令和5年度", section: "A", type: "ox",
     question: "設計図書に記載する配管材料の組合せとして、排水用硬質塩化ビニルライニング鋼管の規格記号はSGP-VD（JWWA）である。",
     answer: false, choices: [],
     explanation: "×：排水用硬質塩化ビニルライニング鋼管の規格はWSP 042（日本水道鋼管協会）であり、JWWA規格ではない。正しい呼称はV-DA。規格団体・記号の記載が誤り。"
   },
   {
-    id: "r5-a-44-3", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-44-3", year: "令和5年度", section: "A", type: "ox",
     question: "設計図書に記載する配管材料の組合せとして、リサイクル硬質ポリ塩化ビニル三層管の規格記号はRS-VU（JIS）である。",
     answer: true, choices: [],
     explanation: "○：リサイクル硬質ポリ塩化ビニル三層管の規格はJIS K 9798で記号はRS-VU。正しい組合せ。"
   },
   {
-    id: "r5-a-44-4", year: "令和5年", section: "A", type: "ox",
+    id: "r5-a-44-4", year: "令和5年度", section: "A", type: "ox",
     question: "設計図書に記載する配管材料の組合せとして、水道用ポリエチレン粉体ライニング鋼管（白）の規格記号はSGP-PB（JWWA）である。",
     answer: true, choices: [],
     explanation: "○：水道用ポリエチレン粉体ライニング鋼管（白）の規格はJWWA K 132で記号はSGP-PB。正しい組合せ。"

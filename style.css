@@ -538,6 +538,72 @@ body.quiz-active #screen-quiz .card {
   font-size: 15px;
 }
 
+/* ─── データ引継ぎ モーダル ─── */
+#transfer-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#transfer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+#transfer-dialog {
+  position: relative;
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 24px 20px 20px;
+  width: min(340px, 90vw);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+#transfer-title {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+}
+
+#transfer-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+#transfer-code {
+  width: 100%;
+  font-family: monospace;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+#transfer-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#transfer-actions button {
+  padding: 12px;
+  font-size: 15px;
+}
+
 /* ─── Utilities ─── */
 .hidden { display: none !important; }
 
